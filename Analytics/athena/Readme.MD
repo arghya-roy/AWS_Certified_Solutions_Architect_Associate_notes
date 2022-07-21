@@ -1,1 +1,12 @@
-
+- Serverless query service to perform analytics against S3 objects
+- Uses standard SQL language to query the files
+- Supports CSV, JSON, ORC, Avro, and Parquet (built on Presto)
+- Pricing: $5.00 per TB of data scanned
+- Use compressed or columnar data for cost-savings (less scan)
+- Use cases: Business intelligence / analytics / reporting, analyze & 
+  query VPC Flow Logs, ELB Logs, CloudTrail trails, etc... 
+- Exam Tip: analyze data in S3 using serverless SQL, use Athena
+- We use athena to run sql query on s3, glue etc. 
+- Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+- Athena is easy to use. Simply point to your data in Amazon S3, define the schema, and start querying using standard SQL. Most results are delivered within seconds. With Athena, there’s no need for complex ETL jobs to prepare your data for analysis. This makes it easy for anyone with SQL skills to quickly analyze large-scale datasets.
+- Athena is out-of-the-box integrated with AWS Glue Data Catalog, allowing you to create a unified metadata repository across various services, crawl data sources to discover schemas and populate your Catalog with new and modified table and partition definitions, and maintain schema versioning.
