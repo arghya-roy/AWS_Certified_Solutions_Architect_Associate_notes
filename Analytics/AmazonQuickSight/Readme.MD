@@ -1,0 +1,7 @@
+- You can compare  Amazon QuickSight with datastudio in gcp.
+- For first time you have sign up for your  Amazon QuickSight from aws.
+- You can select standard option or enterprize option.
+- You can connect  Amazon QuickSight with with aws account usinh SSO or active directory.
+- Click on dataset.
+- Tou can see some existing dataset, Click on new dataset.
+- You can get many option to pick your data (data source) and integrate to  Amazon QuickSight like - Amazon Athena, Amazon Aurora, Amazon OpenSearch Service 7.7 or later, RDS, You can use files in Amazon S3, direct upload ( csv etc) etc.
