@@ -75,3 +75,13 @@ IoT telemetry data.
 - **Consumer** - amazon rekognization video, amazon segamaker, HLS based media playback etc.
 - No infrastructure to be managed.
 - Example - Live Youtube, Video call, Zoom etc.
+---
+
+- **Kinesis Data Streams**: For provisioned mode scaling is required but for on demand scaling will be done by amazon. Serverless. shards are required.
+- **Kinesis Data Firehose**: scaling will be done by amazon. Serverless. shards are  not required.
+- **Kinesis Data Analytics**: scaling will be done by amazon. Serverless. shards are  not required.
+- **Kinesis Video Streams**: scaling will be done by amazon. Serverless. shards are  not required.
+
+---
+
+### **Shards of Kinesis Data Streams** -
