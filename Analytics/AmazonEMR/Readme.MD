@@ -21,6 +21,13 @@ frameworks such as Apache Spark, Apache Hive, and Presto.
 - Those framework runs on multiple instances.
 - So here amazon EMR or amazon elastic mapreduce used to manage clusrer of those data processing framework. Also it has Auto-scaling feature and integrated with Spot instances.
 - Using amazon EMR you can run those instances on Amazon EC2 clusters, Amazon EKS, AWS Outposts, or Amazon EMR Serverless.
+- You will have one EMR master node which manages other nodes (core nodes)
+- You can pick data as a source from s3, kinesis, dynamodb etc.
+- Go to EMR and click on create cluser then you get a option for data processing framework - Hadoop, Hbase, presto, spark. You can select any of them then that will be installed on your cluster automatically. As an exanple you choose spark.
+- Inside hardware section you can select instance type and auto scaling config as per your workload.
+- download key pair to do ssh to your master node.
+- in your visual studio write a script for big data analysis ( as an example you write a script which will pick a csv file from s3 then select some raw as per **where query** then made a another csv and put that inside another bucket ). 
+- Then ssh to master node and run `spark submit demo.py`
 
 ## use cases -
 ### Perform big data analytics - 
