@@ -16,6 +16,12 @@ vast amount of data
 - Amazon EMR is a cloud big data platform for running large-scale distributed data processing jobs, interactive SQL queries, and machine learning (ML) applications using open-source analytics
 frameworks such as Apache Spark, Apache Hive, and Presto.
 
+## details -
+- Apache Spark, Apache Hive, and Presto are data processing framework which are used to analysis big data like data petabytes of data from social media.
+- Those framework runs on multiple instances.
+- So here amazon EMR or amazon elastic mapreduce used to manage clusrer of those data processing framework. Also it has Auto-scaling feature and integrated with Spot instances.
+- Using amazon EMR you can run those instances on Amazon EC2 clusters, Amazon EKS, AWS Outposts, or Amazon EMR Serverless.
+
 ## use cases -
 ### Perform big data analytics - 
 Run large-scale data processing and what-if analysis using statistical algorithms and predictive models to uncover hidden patterns, correlations, market trends, and customer preferences.
