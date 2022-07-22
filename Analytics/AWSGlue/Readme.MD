@@ -8,11 +8,11 @@
 ### AWS Glue Data Catalog
 The persistent metadata store in AWS Glue. It contains table definitions, job definitions, and other control information to manage your AWS Glue environment. Each AWS account has one AWS Glue Data Catalog per region. It contains databases and tables.
 
-### Classifier
+### Classifier - creates schema as per file format
 Determines the schema of your data. AWS Glue provides classifiers for common file types, such as CSV, JSON, AVRO, XML, and others. It also provides classifiers for common relational database management systems using a JDBC connection. You can write your own classifier by using a grok pattern or by specifying a row tag in an XML document.
 
 ### Connection
-A Data Catalog object that contains the properties that are required to connect to a particular data store.
+A Data Catalog object that contains the properties that are required to connect to a particular data store. You can use source or targer as connection then inside glue job you can use those connections as source or target.
 
 ### Crawler
 A program that connects to a data store (source or target), progresses through a prioritized list of classifiers to determine the schema for your data, and then creates metadata tables in the AWS Glue Data Catalog. It reads the data from data sources then create a metadata table ).
