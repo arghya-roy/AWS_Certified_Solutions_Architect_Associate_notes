@@ -86,9 +86,12 @@ IoT telemetry data.
 
 ### **Shards of Kinesis Data Streams** -
 
-#### For ondemand -
+### For ondemand -
 By default, data streams with on-demand mode scale throughput automatically to accommodate traffic of up to 200 MiB per second and 200,000 records per second for the write capacity. If traffic exceeds capacity, your data stream will throttle.
 - Write capacity - Maximum
-200 MiB/second and 200,000 records/second
+  200 MiB/second and 200,000 records/second
+- Read capacity - Maximum (per consumer) 400 MiB/second Up to 2 default consumers. Use Enhanced Fan-Out (EFO) for more consumers. EFO supports adding upto 20     consumers, each having a **dedicated throughput**.
 
-- Read capacity - Maximum (per consumer) 400 MiB/second Up to 2 default consumers. Use Enhanced Fan-Out (EFO) for more consumers. EFO supports adding upto 20 consumers, each having a dedicated throughput.
+### For Provisioned -
+- Write capacity -Maximum 1 MiB/second and 1,000 records/second per shard
+- read capacity - Maximum 2 MiB/second
