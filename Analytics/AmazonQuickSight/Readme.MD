@@ -1,5 +1,6 @@
 - You can compare  Amazon QuickSight with datastudio in gcp.
 - For first time you have sign up for your  Amazon QuickSight from aws.
+- use for Business intelligence
 - You can select standard option or enterprize option.
 - You can connect  Amazon QuickSight with with aws account usinh SSO or active directory.
 - Click on dataset.
