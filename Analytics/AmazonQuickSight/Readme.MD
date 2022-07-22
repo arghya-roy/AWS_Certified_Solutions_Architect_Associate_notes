@@ -6,6 +6,7 @@
 - Tou can see some existing dataset, Click on new dataset.
 - You can get many option to pick your data (data source) and integrate to  Amazon QuickSight like - Amazon Athena, EMR, Amazon Aurora, Amazon OpenSearch Service 7.7 or later, RDS, You can use files in Amazon S3, direct upload ( csv etc) etc.
 - Using any of the data sources you can create dashboard.
+- You can also share your dashboard.
 
 ## features -
 - Serverless auto-scaling
