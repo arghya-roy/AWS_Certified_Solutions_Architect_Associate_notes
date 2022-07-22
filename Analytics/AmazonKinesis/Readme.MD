@@ -20,6 +20,7 @@ Retention between 1 day to 365 days
 - Each shard gets 1MB/s in (or 1000 records per second)
 - Each shard gets 2MB/s out (classic or enhanced fan-out consumer)
 - You pay per shard provisioned per hour
+- 
 **On-demand mode:**
 - No need to provision or manage the capacity
 - Default capacity provisioned (4 MB/s in or 4000 records per second)
