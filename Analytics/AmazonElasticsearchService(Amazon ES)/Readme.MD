@@ -27,3 +27,10 @@ CloudWatch Logs for data ingestion
 - Performance: based on ElasticSearch project (open source), petabyte scale
 - Cost: pay per node provisioned (similar to RDS)
 - Remember: OpenSearch = Search / Indexin
+## Configuration -
+- create domain.
+- create nodes cluster
+- select vpc, az
+- click on create
+- upload json data through curl and api which you will get after click on create.
+- will get a kibana url, using this you can search your key inside that json data
