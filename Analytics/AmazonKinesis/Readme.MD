@@ -62,4 +62,6 @@ Retention between 1 day to 365 days
 ## Kinesis video stream -
 - Can process or transfer realtime video.
 - **Producer** - Drones, cctv etc
-- **Consumer** - amazon rekognization video, amazon segamaker, HLS based media playback etc
+- **Consumer** - amazon rekognization video, amazon segamaker, HLS based media playback etc.
+- No infrastructure to be managed.
+- Example - Live Youtube, Video call, Zoom etc.
