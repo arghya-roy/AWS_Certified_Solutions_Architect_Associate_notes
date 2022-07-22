@@ -1,4 +1,4 @@
-## Kinesis Overview -
+## Kinesis Overview - All of them are serverless
 - Makes it easy to collect, process, and analyze streaming data in real-time 
 - Ingest real-time data such as: Application logs, Metrics, Website clickstreams, 
 IoT telemetry data.
@@ -8,7 +8,8 @@ IoT telemetry data.
 - **Kinesis Video Streams**: capture, process, and store video streams
 ---
 ## Kinesis Data Streams - 
-Retention between 1 day to 365 days
+- Amazon Kinesis Data Streams is a serverless streaming data service that makes it easy to capture, process, and store data streams at any scale.
+- Retention between 1 day to 365 days
 - Ability to reprocess (replay) data
 - Once data is inserted in Kinesis, it can’t be deleted (immutability)
 - Data that shares the same partition goes to the same shard (ordering)
@@ -27,18 +28,23 @@ Retention between 1 day to 365 days
 - Scales automatically based on observed throughput peak during the last 30 days
 - Pay per stream per hour & data in/out per GB
 ### Details -
-- Kinesis data stream picks real time data as producer through kinesis agent from any app / website / ec2. Then pass those inside shard of kinesis. Shard keeps data records in serial no wise. Then loads those realtime data inside another server / ec2 / app as consumer.
+- Kinesis data stream picks real time data as producer through kinesis agent from any app / website / ec2. Then pass those inside shard of kinesis. Shard keeps data records in serial no wise. Then loads those realtime data inside another server / ec2 / app / lambda as consumer.
 - You can keep multiple shards as per data requests.
+- data will be loaded from code. If you want to load data to lambda then it lambda have to set kinesis stream as a trigger.
+- For provisioned mode scaling is required.
 
 ---
 ## Kinesis Data Firehose -
 - It is mainly used to store real time data to s3 or rds.
 - It puts data to destination in near realtime means within 60 sec Or minimum 32 MB of data at a time.
 - Supports many data formats, conversions, transformations, compression
--  Supports custom data transformations using AWS Lambda
--  Can send failed or all data to a backup S3 bucket
+- Supports custom data transformations using AWS Lambda. **for transformation** - lambda
+-  If you want to do any transformation of your data before load to destination then you can use lambda before load (consumer ).
+-  Can send failed or all data to a backup S3 bucket.
+-  no need to use shards here. serverless
+-  Kinesis Firehose will take care of all of the monitoring, scaling, and data management for you.
 - **producer** - Application, clients, SDK, Kinesis Producer Library (KPL), Kinesis Agent, Kinesis data stream, clouthwatch log or event, AWS IoT etc.
-- **Consumer** - **for transformation** - lambda | **for load** - s3, redshift, elasticsearch, HTTP endpoint, 3rd party partner: Splunk / MongoDB / DataDog / NewRelic
+- **Consumer** - s3, redshift, elasticsearch, HTTP endpoint, 3rd party partner: Splunk / MongoDB / DataDog / NewRelic
 ### use case -
 - IoT Analytics
 - Clickstream analytics
@@ -47,8 +53,10 @@ Retention between 1 day to 365 days
 ---
 ## Kinesis Data Analytics -
 - Perform real-time analytics on Kinesis Streams using SQL
-- Fully managed, no servers to provision
+- Fully managed, no servers to provision.
+- No use to shards here
 - Automatic scaling
+- Amazon Kinesis Data Analytics takes care of everything required to run your real-time applications continuously and scales automatically to match the volume and throughput of your incoming data.
 - Real-time analytics
 - Pay for actual consumption rate
 - Can create streams out of the real-time queries
@@ -61,6 +69,8 @@ Retention between 1 day to 365 days
 
 ## Kinesis video stream -
 - Can process or transfer realtime video.
+- No need to use shards here
+- you do not have to build, operate, or scale any WebRTC related cloud infrastructure 
 - **Producer** - Drones, cctv etc
 - **Consumer** - amazon rekognization video, amazon segamaker, HLS based media playback etc.
 - No infrastructure to be managed.
