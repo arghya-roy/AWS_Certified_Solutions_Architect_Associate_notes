@@ -49,3 +49,11 @@ Initiates an ETL job. Triggers can be defined based on a scheduled time or an ev
 
 ### Worker
 With AWS Glue, you only pay for the time your ETL job takes to run. There are no resources to manage, no upfront costs, and you are not charged for startup or shutdown time. You are charged an hourly rate based on the number of Data Processing Units (or DPUs) used to run your ETL job. A single Data Processing Unit (DPU) is also referred to as a worker. AWS Glue comes with three worker types to help you select the configuration that meets your job latency and cost requirements. Workers come in Standard, G.1X, G.2X, and G.025X configurations.
+
+---
+## Example 1 -
+You can pick multiple data from multiple data source then make a schema of all of them and create a logical table using crawler. After that use a table as extract data
+source of glue job then transform it using script. After that loads the transformed data to another target ( example redshit ).
+## Example 2 - Convert semi structured data schema( json ) of s3 to relational data schema of rds -
+AWS Glue uses crawlers to infer schemas for semi-structured data. It then transforms the data to a relational schema using an ETL (extract, transform, and load) job. For example, you might want to parse JSON data from Amazon Simple Storage Service (Amazon S3) source files to Amazon Relational Database Service (Amazon RDS) tables. Understanding how AWS Glue handles the differences between schemas can help you understand the transformation process.
+https://docs.aws.amazon.com/glue/latest/dg/schema-relationalize.html
