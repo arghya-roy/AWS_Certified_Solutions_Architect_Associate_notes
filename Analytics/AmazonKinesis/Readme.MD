@@ -26,4 +26,10 @@ Retention between 1 day to 365 days
 - Default capacity provisioned (4 MB/s in or 4000 records per second)
 - Scales automatically based on observed throughput peak during the last 30 days
 - Pay per stream per hour & data in/out per GB
+### Details -
+- Kinesis data stream picks real time data as producer through kinesis agent from any app / website / ec2. Then pass those inside shard of kinesis. Shard keeps data records in serial no wise. Then loads those realtime data inside another server / ec2 / app as consumer.
+- You can keep multiple shards as per data requests.
+
+
+
 
