@@ -12,3 +12,4 @@
 - Athena is out-of-the-box integrated with AWS Glue Data Catalog, allowing you to create a unified metadata repository across various services, crawl data sources to discover schemas and populate your Catalog with new and modified table and partition definitions, and maintain schema versioning.
 - before run query on athena, It is necessery to select a bucket where you store the output of queries. You can find this in the settings of athena.
 - You can create a database and table to run query on s3 directly or you can create a database and table to run query on glue.
+- Mainly used to run sql quiries on s3 and glue table.
