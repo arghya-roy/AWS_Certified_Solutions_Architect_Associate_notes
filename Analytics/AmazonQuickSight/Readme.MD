@@ -4,4 +4,12 @@
 - You can connect  Amazon QuickSight with with aws account usinh SSO or active directory.
 - Click on dataset.
 - Tou can see some existing dataset, Click on new dataset.
-- You can get many option to pick your data (data source) and integrate to  Amazon QuickSight like - Amazon Athena, Amazon Aurora, Amazon OpenSearch Service 7.7 or later, RDS, You can use files in Amazon S3, direct upload ( csv etc) etc.
+- You can get many option to pick your data (data source) and integrate to  Amazon QuickSight like - Amazon Athena, EMR, Amazon Aurora, Amazon OpenSearch Service 7.7 or later, RDS, You can use files in Amazon S3, direct upload ( csv etc) etc.
+- Using any of the data sources you can create dashboard.
+
+## features -
+- Serverless auto-scaling
+- Broad data source support
+- SPICE (super-fast, parallel, in-memory, calculation engine) ( option )
+- QuickSight Mobile for iOS and Android enables you to securely get insights from your data from anywhere.
+- Pay-per-use pricing.
