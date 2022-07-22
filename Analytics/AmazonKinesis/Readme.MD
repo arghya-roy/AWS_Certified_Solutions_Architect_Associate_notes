@@ -95,3 +95,16 @@ By default, data streams with on-demand mode scale throughput automatically to a
 ### For Provisioned -
 - Write capacity -Maximum 1 MiB/second and 1,000 records/second per shard
 - read capacity - Maximum 2 MiB/second
+
+---
+## Record or data of shards -
+Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
+### partition key -
+- group of related data
+- data with same partition key will go to same shard/
+### sequence number -
+- unique number per record.
+- added automatically by the kinesis
+### data blob -
+- It is actual data which can be of max 1 MB
+### every record is a binary data, which can be json, csv etc.
