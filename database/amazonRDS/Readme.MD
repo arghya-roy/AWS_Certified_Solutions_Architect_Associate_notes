@@ -71,3 +71,16 @@
 - A snapshot is taken
 - A new DB is restored from the snapshot in a new AZ
 - Synchronization is established between the two databases
+
+## RDS Security - Encryption
+### At rest encryption
+• Possibility to encrypt the master & read replicas with AWS KMS - AES-256 encryption
+• Encryption has to be defined at launch time
+• If the master is not encrypted, the read replicas cannot be encrypted
+• Transparent Data Encryption (TDE) available for Oracle and SQL Server
+### In-flight encryption
+• SSL certificates to encrypt data to RDS in flight
+• Provide SSL options with trust certificate when connecting to database
+• To enforce SSL:
+• PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups)
+• MySQL: Within the DB: GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
