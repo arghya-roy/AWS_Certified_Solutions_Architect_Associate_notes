@@ -56,14 +56,18 @@
 
 ### RDS Multi AZ (Disaster Recovery)
 - SYNC replication
-- One DNS name – automatic app 
-failover to standby
+- Multi az means there is always a primary database which will work for write and read operation but there is also a standby ( not working for read and write ) database inside another az in same regions. data from primary db will be replicated sync to standby db. when primary db fails then standby will take place of primary and that will works as a primary db for read and write operation. After that another standby db will be created automatically.
+- One DNS name – automatic app failover to standby
 - Increase availability
-- Failover in case of loss of AZ, loss of 
-network, instance or storage failure
+- Failover in case of loss of AZ, loss of network, instance or storage failure
 - No manual intervention in apps
 - Not used for scaling
 - Multi-AZ replication is free
-- Note:The Read Replicas be setup as 
-Multi AZ for Disaster Recovery (DR)
-- 
+- **Note:The Read Replicas be setup as Multi AZ for Disaster Recovery (DR)**
+### RDS – move From Single-AZ to Multi-AZ -
+- Zero downtime operation (no need to stop the DB)
+- Just click on “modify” for the database
+- The following happens internally:
+- A snapshot is taken
+- A new DB is restored from the snapshot in a new AZ
+- Synchronization is established between the two databases
