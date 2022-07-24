@@ -112,3 +112,19 @@ instances) – it controls which IP / security group can communicate with RDS
     Network in/out must be encrypted using SSL </br>
     IAM to centrally manage users instead of DB </br>
     Can leverage IAM Roles and EC2 Instance profiles for easy integration </br>
+
+## RDS Security – Summary 
+### Encryption at rest:
+- Is done only when you first create the DB instance
+- or: unencrypted DB => snapshot => copy snapshot as encrypted => create DB from snapshot
+### Your responsibility:
+- Check the ports / IP / security group inbound rules in DB’s SG
+- In-database user creation and permissions or manage through IAM
+- Creating a database with or without public access
+- Ensure parameter groups or DB is configured to only allow SSL connections
+### AWS responsibility:
+- No SSH access
+- No manual DB patching
+- No manual OS patching
+- No way to audit the underlying instance
+
