@@ -81,6 +81,6 @@
 ### In-flight encryption
 - SSL certificates to encrypt data to RDS in flight
 - Provide SSL options with trust certificate when connecting to database
-- ####To enforce SSL:
-- PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups)
-- MySQL: Within the DB: GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
+- To enforce SSL:
+-     PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups)
+-     MySQL: Within the DB: GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
