@@ -34,3 +34,18 @@
 - Useful for applications with unpredictable workloads 
 - Supports all RDS database engines (MariaDB, MySQL, PostgreSQL, SQL Server, Oracle)
 
+### RDS Read Replicas -
+- Up to 5 Read Replicas ( 1 write and 5 read )
+- Within AZ, Cross AZ or Cross Region
+- Replication is ASYNC, so reads are eventually consistent ( Eventtually consistent means it will give outpyt before sync of every replicas )
+- Replicas can be promoted to their own DB
+- Applications must update the connection string to leverage read replicas.
+### RDS Read Replicas use cases -
+- You have a production database that is taking on normal load
+- You want to run a reporting application to run some analytics
+- You create a Read Replica to run the new workload there
+- The production application is unaffected
+- Read replicas are used for SELECT (=read) only kind of statements (not INSERT, UPDATE, DELETE)
+
+### RDS Read Replicas – Network Cost 
+- 
