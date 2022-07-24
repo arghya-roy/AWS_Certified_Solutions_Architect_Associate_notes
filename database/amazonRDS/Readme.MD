@@ -81,9 +81,9 @@
 ### In-flight encryption
 - SSL certificates to encrypt data to RDS in flight
 - Provide SSL options with trust certificate when connecting to database
-- To enforce SSL:
--     PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups)
--     MySQL: Within the DB: GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
+- To enforce SSL: </br>
+    PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups) </br>
+    MySQL: Within the DB: GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL; </br>
 ## RDS Encryption Operations
 ### Encrypting RDS backups
 - Snapshots of un-encrypted RDS databases are un-encrypted
@@ -108,7 +108,7 @@ instances) – it controls which IP / security group can communicate with RDS
 - IAM database authentication works with MySQL and PostgreSQL
 - You don’t need a password, just an authentication token obtained through IAM & RDS API calls
 - Auth token has a lifetime of 15 minutes
-- **Benefits:**
+- **Benefits:** </br>
     Network in/out must be encrypted using SSL </br>
     IAM to centrally manage users instead of DB </br>
     Can leverage IAM Roles and EC2 Instance profiles for easy integration </br>
