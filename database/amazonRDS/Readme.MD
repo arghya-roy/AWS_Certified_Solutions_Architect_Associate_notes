@@ -40,6 +40,7 @@
 - Replication is ASYNC, so reads are eventually consistent ( Eventtually consistent means it will give outpyt before sync of every replicas )
 - Replicas can be promoted to their own DB
 - Applications must update the connection string to leverage read replicas.
+- Assume we have one read and write ( main1) and three read replicas ( r1, r2, r3 ). Then data will be replicated from main1 to r1 then r1 to r2 then r2 to r3.
 ### RDS Read Replicas use cases -
 - You have a production database that is taking on normal load
 - You want to run a reporting application to run some analytics
@@ -48,4 +49,21 @@
 - Read replicas are used for SELECT (=read) only kind of statements (not INSERT, UPDATE, DELETE)
 
 ### RDS Read Replicas – Network Cost 
+- In AWS there’s a network cost when data goes from one AZ to another 
+- For RDS Read Replicas within the same region, you don’t pay that fee
+- When read replicas are in same region then no replication fees, but when in different region then have to pay.
+- Also no replivcation cost when replicas are present inside different az of same region.
+
+### RDS Multi AZ (Disaster Recovery)
+- SYNC replication
+- One DNS name – automatic app 
+failover to standby
+- Increase availability
+- Failover in case of loss of AZ, loss of 
+network, instance or storage failure
+- No manual intervention in apps
+- Not used for scaling
+- Multi-AZ replication is free
+- Note:The Read Replicas be setup as 
+Multi AZ for Disaster Recovery (DR)
 - 
