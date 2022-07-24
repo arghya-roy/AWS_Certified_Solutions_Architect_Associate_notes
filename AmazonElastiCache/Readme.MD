@@ -9,15 +9,26 @@
 ## There are two types of elasticcache -
 ### elasticache for redis -
 - Multi AZ with Auto-Failover
+- auto failover is optional for Redis (cluster mode disabled) and required for Redis (cluster mode enabled)
 - Read Replicas to scale reads and have high availability
 - Data Durability using AOF persistence
 - Backup and restore features
+- single threaded architecture
+- **Cluster mode disabled** - Disabled The Redis cluster will have a single shard (node group) with one primary node and up to 5 read replica.
+- **Cluster mode enabled** - Cluster mode enables replication across multiple shards for enhanced scalability and availability.
+
+
+
+
 ### elasticache for Memcached -
 - Multi-node for partitioning of data (sharding)
+- Can spread nodes acress multiple az.
+- No auto failover.
 - No high availability (replication)
 - Non persistent
 - No backup and restore
 - Multi-threaded architecture
+### For more https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/SelectEngine.html
 ## Use cases -
 ### DB Cache -
 - Applications queries ElastiCache, if not available, get from RDS and store in ElastiCache.
