@@ -84,3 +84,13 @@
 - To enforce SSL:
 -     PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups)
 -     MySQL: Within the DB: GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
+## RDS Encryption Operations
+### Encrypting RDS backups
+- Snapshots of un-encrypted RDS databases are un-encrypted
+- Snapshots of encrypted RDS databases are encrypted
+- Can copy a snapshot into an encrypted one
+### To encrypt an un-encrypted RDS database:
+- Create a snapshot of the un-encrypted database
+- Copy the snapshot and enable encryption for the snapshot
+- Restore the database from the encrypted snapshot
+- Migrate applications to the new database, and delete the old databas
