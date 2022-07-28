@@ -46,7 +46,6 @@ By default, data streams with on-demand mode scale throughput automatically to a
 - Write capacity -Maximum 1 MiB/second and 1,000 records/second per shard
 - read capacity - Maximum 2 MiB/second
 
----
 ## Record or data of shards -
 Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
 ### partition key -
