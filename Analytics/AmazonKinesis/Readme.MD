@@ -10,9 +10,11 @@ IoT telemetry data.
 ## Kinesis Data Streams - 
 - Amazon Kinesis Data Streams is a serverless streaming data service that makes it easy to capture, process, and store data streams at any scale.
 - Retention between 1 day to 365 days
+- By default, records of a stream are accessible for up to 24 hours from the time they are added to the stream (can be raised to 7 days by enabling extended data retention).
 - Ability to reprocess (replay) data
 - Once data is inserted in Kinesis, it can’t be deleted (immutability)
 - Data that shares the same partition goes to the same shard (ordering)
+- Kinesis Data Streams replicates synchronously across three AZs.
 - **Producers:** AWS SDK, Kinesis Producer Library (KPL), Kinesis Agent
 - **Consumers:** Write your own: Kinesis Client Library (KCL), AWS SDK | Managed: AWS Lambda, Kinesis Data Firehose, Kinesis Data Analytics,
 ### Capacity Modes -
@@ -32,6 +34,31 @@ IoT telemetry data.
 - You can keep multiple shards as per data requests.
 - data will be loaded from code. If you want to load data to lambda then it lambda have to set kinesis stream as a trigger.
 - For provisioned mode scaling is required.
+### **Shards of Kinesis Data Streams** -
+
+### For ondemand -
+By default, data streams with on-demand mode scale throughput automatically to accommodate traffic of up to 200 MiB per second and 200,000 records per second for the write capacity. If traffic exceeds capacity, your data stream will throttle.
+- Write capacity - Maximum
+  200 MiB/second and 200,000 records/second
+- Read capacity - Maximum (per consumer) 400 MiB/second Up to 2 default consumers. Use Enhanced Fan-Out (EFO) for more consumers. EFO supports adding upto 20     consumers, each having a **dedicated throughput**.
+
+### For Provisioned -
+- Write capacity -Maximum 1 MiB/second and 1,000 records/second per shard
+- read capacity - Maximum 2 MiB/second
+
+---
+## Record or data of shards -
+Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
+### partition key -
+- group of related data
+- data with same partition key will go to same shard/
+### sequence number -
+- unique number per record.
+- added automatically by the kinesis
+### data blob -
+- It is actual data which can be of max 1 MB
+### every record is a binary data, which can be json, csv etc.
+
 
 ---
 ## Kinesis Data Firehose -
@@ -84,27 +111,3 @@ IoT telemetry data.
 
 ---
 
-### **Shards of Kinesis Data Streams** -
-
-### For ondemand -
-By default, data streams with on-demand mode scale throughput automatically to accommodate traffic of up to 200 MiB per second and 200,000 records per second for the write capacity. If traffic exceeds capacity, your data stream will throttle.
-- Write capacity - Maximum
-  200 MiB/second and 200,000 records/second
-- Read capacity - Maximum (per consumer) 400 MiB/second Up to 2 default consumers. Use Enhanced Fan-Out (EFO) for more consumers. EFO supports adding upto 20     consumers, each having a **dedicated throughput**.
-
-### For Provisioned -
-- Write capacity -Maximum 1 MiB/second and 1,000 records/second per shard
-- read capacity - Maximum 2 MiB/second
-
----
-## Record or data of shards -
-Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
-### partition key -
-- group of related data
-- data with same partition key will go to same shard/
-### sequence number -
-- unique number per record.
-- added automatically by the kinesis
-### data blob -
-- It is actual data which can be of max 1 MB
-### every record is a binary data, which can be json, csv etc.
