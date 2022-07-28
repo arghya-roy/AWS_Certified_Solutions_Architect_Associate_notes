@@ -1,3 +1,7 @@
+
+https://digitalcloud.training/amazon-kinesis/#kinesis-video-streams
+
+
 ## Kinesis Overview - All of them are serverless
 - Makes it easy to collect, process, and analyze streaming data in real-time 
 - Ingest real-time data such as: Application logs, Metrics, Website clickstreams, 
@@ -72,6 +76,12 @@ Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
 - Real-time data analytics.
 - Complex stream processing.
 ---
+
+
+
+
+
+
 ## Kinesis Data Firehose -
 - It is mainly used to store real time data to s3 or rds.
 - It puts data to destination in near realtime means within 60 sec Or minimum 32 MB of data at a time.
@@ -81,6 +91,13 @@ Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
 -  Can send failed or all data to a backup S3 bucket.
 -  no need to use shards here. serverless
 -  Kinesis Firehose will take care of all of the monitoring, scaling, and data management for you.
+-  With Kinesis Data Firehose you don’t need to write an application or manage resources.
+- Firehose can batch, compress, and encrypt data before loading it.
+- Firehose synchronously replicates data across three AZs as it is transported to destinations.
+- Each delivery stream stores data records for up to 24 hours.
+- A record is the data of interest your data producer sends to a delivery stream.
+- The maximum size of a record (before Base64-encoding) is 1000 KB.
+- A destination is the data store where your data will be delivered.
 - **producer** - Application, clients, SDK, Kinesis Producer Library (KPL), Kinesis Agent, Kinesis data stream, clouthwatch log or event, AWS IoT etc.
 - **Consumer** - s3, redshift, elasticsearch, HTTP endpoint, 3rd party partner: Splunk / MongoDB / DataDog / NewRelic
 ### use case -
@@ -89,6 +106,11 @@ Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
 - log analytics
 - security monitoring
 ---
+
+
+
+
+
 ## Kinesis Data Analytics -
 - Perform real-time analytics on Kinesis Streams using SQL
 - Fully managed, no servers to provision.
@@ -98,27 +120,53 @@ Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
 - Real-time analytics
 - Pay for actual consumption rate
 - Can create streams out of the real-time queries
+- Can ingest data from Kinesis Streams and Kinesis Firehose.
+- Output to S3, RedShift, Elasticsearch and Kinesis Data Streams.
+- Sits over Kinesis Data Streams and Kinesis Data Firehose.
 ### Use cases:
 - Time-series analytics
 - Real-time dashboards
 - Real-time metrics
+- Generate time-series analytics.
+- Feed real-time dashboards.
+- Create real-time alerts and notifications.
+### A Kinesis Data Analytics application consists of three components:
+- **Input** – the streaming source for your application.
+- **Application code** – a series of SQL statements that process input and produce output.
+- **Output** – one or more in-application streams to hold intermediate results.
+### Kinesis Data Analytics supports two types of inputs: streaming data sources and reference data sources:
+
+- A streaming data source is continuously generated data that is read into your application for processing.
+- A reference data source is static data that your application uses to enrich data coming in from streaming sources.
 
 ---
 
+
+
+
 ## Kinesis video stream -
 - Can process or transfer realtime video.
-- No need to use shards here
 - you do not have to build, operate, or scale any WebRTC related cloud infrastructure 
 - **Producer** - Drones, cctv etc
 - **Consumer** - amazon rekognization video, amazon segamaker, HLS based media playback etc.
 - No infrastructure to be managed.
 - Example - Live Youtube, Video call, Zoom etc.
+- Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), and other processing.
+- Durably stores, encrypts, and indexes video data streams, and allows access to data through easy-to-use APIs.
+- Producers provide data streams.
+- Stores data for 24 hours by default, up to 7 days.
+- Stores data in shards – 5 transaction per second for reads, up to a max read rate of 2MB per second and 1000 records per second for writes up to a max of 1MB per second.
+- Consumers receive and process data.
+- Can have multiple shards in a stream.
+- Not sure about shards
+
+Supports encryption at rest with server-side encryption (KMS) with a customer master key.
 ---
 
 - **Kinesis Data Streams**: For provisioned mode scaling is required but for on demand scaling will be done by amazon. Serverless. shards are required.
 - **Kinesis Data Firehose**: scaling will be done by amazon. Serverless. shards are  not required.
 - **Kinesis Data Analytics**: scaling will be done by amazon. Serverless. shards are  not required.
-- **Kinesis Video Streams**: scaling will be done by amazon. Serverless. shards are  not required.
+- **Kinesis Video Streams**: scaling will be done by amazon. Serverless. shards are  not required(not sure about shards).
 
 ---
 
