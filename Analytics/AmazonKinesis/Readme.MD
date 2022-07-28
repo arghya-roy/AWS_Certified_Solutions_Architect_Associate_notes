@@ -58,7 +58,19 @@ Record is made up of 3 things 1) partition key 2) sequence number 3) data blob
 - It is actual data which can be of max 1 MB
 ### every record is a binary data, which can be json, csv etc.
 
+### Resharding of shard -
+- There are two types of resharding operations: shard split and shard merge.
+- In a shard split, you divide a single shard into two shards.
+- In a shard merge, you combine two shards into a single shard.
+- Splitting increases the number of shards in your stream and therefore increases the data capacity of the stream.
+- Splitting increases the cost of your stream (you pay per-shard).
+- Merging reduces the number of shards in your stream and therefore decreases the data capacity—and cost—of the stream.
 
+### Use cases of kinesis data stream -
+- Accelerated log and data feed intake.
+- Real-time metrics and reporting.
+- Real-time data analytics.
+- Complex stream processing.
 ---
 ## Kinesis Data Firehose -
 - It is mainly used to store real time data to s3 or rds.
