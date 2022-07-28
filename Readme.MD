@@ -13,3 +13,9 @@
 - (explanation) Amazon Kinesis Data Streams collect and process data in real time. A Kinesis data stream is a set of shards. Each shard has a sequence of data records. Each data record has a sequence number that is assigned by Kinesis Data Streams. A shard is a uniquely identified sequence of data records in a stream. </br>
 A partition key is used to group data by shard within a stream. Kinesis Data Streams segregates the data records belonging to a stream into multiple shards. It uses the partition key that is associated with each data record to determine which shard a given data record belongs to. </br>
 For this scenario, the solutions architect can use a partition key for each device. This will ensure the records for that device are grouped by shard and the shard will ensure ordering. Amazon S3 is a valid destination for saving the data records. 
+
+---
+- This is not the best storage solution for log files and its main use case as a DB is transactional rather than analytical.
+- you cannot implement read throttling for a Kinesis stream.
+- Elasticsearch cannot perform SQL queries and join tables for data in Amazon S3.
+- 
