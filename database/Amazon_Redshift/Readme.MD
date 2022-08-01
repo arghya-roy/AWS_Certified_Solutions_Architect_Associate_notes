@@ -1,3 +1,4 @@
+- It is used to store large data and analyze on it using sql.
 - Redshift is based on PostgreSQL, but it’s not used for OLTP
 - It’s OLAP – online analytical processing (analytics and data warehousing)
 - 10x better performance than other data warehouses, scale to PBs of data
