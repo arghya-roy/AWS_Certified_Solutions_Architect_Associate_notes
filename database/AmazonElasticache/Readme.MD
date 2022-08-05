@@ -65,3 +65,7 @@ store temporary session data in a cache (using TTL features)
 ### ANS -
 - Redis AUTH command.
 - Redis authentication tokens enable Redis to require a token (password) before allowing clients to execute commands, thereby improving data security. You can require that users enter a token on a token-protected Redis server. To do this, include the parameter --auth-token (API: AuthToken) with the correct token when you create your replication group or cluster. Also include it in all subsequent commands to the replication group or cluster.
+
+## An Amazon ElastiCache for Redis cluster runs across multiple Availability Zones. A solutions architect is concerned about the security of sensitive data as it is replicated between nodes. How can the solutions architect protect the sensitive data?
+### ANS -
+- When it staes that while replication, it means w have to enable encrypt in transit.
