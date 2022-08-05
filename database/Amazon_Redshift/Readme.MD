@@ -45,3 +45,10 @@ Many organizations will have a separate database (Eg: Amazon RDS) for all the on
 
 - The online database is usually optimized for quick responses and fast writes. Running large analysis or aggregation jobs over this database will slow down the database and can affect your customer experience.
 - The warehouse application can have data from multiple sources and not only transactional data. There may be third-party sources or data sources from other parts of the pipeline that needs to be used for analysis or aggregation.
+
+--
+## A company has an eCommerce application that runs from multiple AWS Regions. Each region has a separate database running on Amazon EC2 instances. The company plans to consolidate the data to a columnar database and run analytics queries. Which approach should the company take?
+### ANS -
+- Use the COPY command to load data into an Amazon RedShift data warehouse and run the analytics queries there.
+- Amazon Redshift is an enterprise-level, petabyte scale, fully managed data warehousing service. It uses columnar storage to improve the performance of complex queries. You can use the COPY command to load data in parallel from one or more remote hosts, such Amazon EC2 instances or other computers. COPY connects to the remote hosts using SSH and executes commands on the remote hosts to generate text output.
+- S3 and kinesis data stream are not columner database.
