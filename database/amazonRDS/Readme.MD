@@ -48,6 +48,7 @@
 - You create a Read Replica to run the new workload there
 - The production application is unaffected
 - Read replicas are used for SELECT (=read) only kind of statements (not INSERT, UPDATE, DELETE)
+- You cannot create an encrypted read replica of an unencrypted RDS DB.
 
 ### RDS Read Replicas – Network Cost 
 - In AWS there’s a network cost when data goes from one AZ to another 
@@ -65,6 +66,7 @@
 - No manual intervention in apps
 - Not used for scaling
 - Multi-AZ replication is free
+- You also cannot have an encrypted Multi-AZ standby instance of an unencrypted RDS DB.
 - **Note:The Read Replicas be setup as Multi AZ for Disaster Recovery (DR)**
 ### RDS – move From Single-AZ to Multi-AZ -
 - Zero downtime operation (no need to stop the DB)
