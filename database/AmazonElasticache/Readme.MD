@@ -5,6 +5,7 @@
 - Helps reduce load off of databases for read intensive workloads.
 - Elasticache mainly works for read purposes.
 - Helps make your application stateless.
+- We can use s3 as a backend of elasticache.
 - AWS takes care of OS maintenance / patching, optimizations, setup, configuration, monitoring, failure recovery and backups.
 ## There are two types of elasticcache -
 ### elasticache for redis -
@@ -79,3 +80,9 @@ store temporary session data in a cache (using TTL features)
 ## An Amazon ElastiCache for Redis cluster runs across multiple Availability Zones. A solutions architect is concerned about the security of sensitive data as it is replicated between nodes. How can the solutions architect protect the sensitive data?
 ### ANS -
 - When it staes that while replication, it means w have to enable encrypt in transit.
+## A company runs a streaming media service and the content is stored on Amazon S3. The media catalog server pulls updated content from S3 and can issue over 1 million read operations per second for short periods. Latency must be kept under 5ms for these updates. Which solution will provide the BEST performance for the media catalog updates?
+### ANS - 
+- Update the application code to use an Amazon ElastiCache for Redis cluster
+- Some applications, such as media catalog updates require high frequency reads, and consistent throughput. For such applications, customers often complement S3 with an in-memory cache, such as Amazon ElastiCache for Redis, to reduce the S3 retrieval cost and to improve performance.
+- "Implement Amazon CloudFront and cache the content at Edge Locations" is incorrect. CloudFront is good for getting media closer to users but in this case we’re trying to improve performance within the data center moving data from S3 to the media catalog server.
+
