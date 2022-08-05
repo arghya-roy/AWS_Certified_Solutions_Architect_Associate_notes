@@ -60,3 +60,8 @@ store temporary session data in a cache (using TTL features)
 ### Memcached
 - Supports SASL-based authentication (advanced)
 
+--
+## A company is deploying an Amazon ElastiCache for Redis cluster. To enhance security a password should be required to access the database. What should the solutions architect use?
+### ANS -
+- Redis AUTH command.
+- Redis authentication tokens enable Redis to require a token (password) before allowing clients to execute commands, thereby improving data security. You can require that users enter a token on a token-protected Redis server. To do this, include the parameter --auth-token (API: AuthToken) with the correct token when you create your replication group or cluster. Also include it in all subsequent commands to the replication group or cluster.
