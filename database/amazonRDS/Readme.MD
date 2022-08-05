@@ -42,7 +42,8 @@
 - Replicas can be promoted to their own DB
 - Applications must update the connection string to leverage read replicas.
 - Assume we have one read and write ( main1) and three read replicas ( r1, r2, r3 ). Then data will be replicated from main1 to r1 then r1 to r2 then r2 to r3.
-- Read replicas can solve latency problem
+- Read replicas can solve latency problem.
+- But read replica does not give sub milisecond result. for that cases you can use elasticache.
 ### RDS Read Replicas use cases -
 - You have a production database that is taking on normal load
 - You want to run a reporting application to run some analytics
