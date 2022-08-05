@@ -1,1 +1,1 @@
-
+- With a gateway vpc endpoint you configure your route table to point to the endpoint. Amazon S3 and DynamoDB use gateway endpoints.
