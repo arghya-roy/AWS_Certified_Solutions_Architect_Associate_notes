@@ -60,6 +60,16 @@ store temporary session data in a cache (using TTL features)
 ### Memcached
 - Supports SASL-based authentication (advanced)
 
+## ElastiCache in-transit encryption implements the following features:
+
+- Encrypted connections — both the server and client connections are Secure Socket Layer (SSL) encrypted.
+
+- Encrypted replication — data moving between a primary node and replica nodes is encrypted.
+
+- Server authentication — clients can authenticate that they are connecting to the right server.
+
+- Client authentication — using the Redis AUTH feature, the server can authenticate the clients.
+
 --
 ## A company is deploying an Amazon ElastiCache for Redis cluster. To enhance security a password should be required to access the database. What should the solutions architect use?
 ### ANS -
