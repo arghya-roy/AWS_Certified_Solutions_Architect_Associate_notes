@@ -137,6 +137,9 @@ The IDENTIFIED WITH clause allows MySQL to use the AWSAuthenticationPlugin to au
 - No manual OS patching
 - No way to audit the underlying instance
 
+### About security group of restored db from snapshot -
+- You can restore a DB instance to a specific point in time, creating a new DB instance. When you restore a DB instance to a point in time, the default DB security group is applied to the new DB instance. If you need custom DB security groups applied to your DB instance, you must apply them explicitly using the AWS Management Console, the AWS CLI modify-db-instance command, or the Amazon RDS API ModifyDBInstance operation after the DB instance is available.
+
 ---
 ## An Amazon RDS Read Replica is being deployed in a separate region. The master database is not encrypted but all data in the new region must be encrypted. How can this be achieved?
 ### ANS - 
