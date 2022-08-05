@@ -9,4 +9,11 @@
 ### To store dynamodb stream log permanantly -
 DynamoDB stream is being consumed by a Lambda function which processes the item data and records a record in CloudWatch Logs - dynamodb strem to lambda to cloudwatch.
 
+## Dynamodb global table -
+- You can replicate your table in multiple region.
+- need to enable dynamodb stream.
+- may need to create replication group ( not sure ).
+- It is multi master configure means you can edit table in any of region.
+- user can be redireted based on their region.
+
 --
