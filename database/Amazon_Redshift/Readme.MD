@@ -40,3 +40,8 @@
 - vs Athena: faster queries / joins / aggregations thanks to indexes
 - Remember: Redshift = Analytics / BI / Data Warehouse
 - vs EMR: EMR uses handoop, spark etc to query on large data but redshift uses SQL.
+### Benefits of Replicating Data from Amazon RDS to Redshift
+Many organizations will have a separate database (Eg: Amazon RDS) for all the online transaction needs and another warehouse (Eg: Amazon Redshift) application for all the offline analysis and large aggregation requirements. There is an obvious need to move data across these two databases (Eg: Amazon RDS to Redshift) for the following reasons:
+
+- The online database is usually optimized for quick responses and fast writes. Running large analysis or aggregation jobs over this database will slow down the database and can affect your customer experience.
+- The warehouse application can have data from multiple sources and not only transactional data. There may be third-party sources or data sources from other parts of the pipeline that needs to be used for analysis or aggregation.
