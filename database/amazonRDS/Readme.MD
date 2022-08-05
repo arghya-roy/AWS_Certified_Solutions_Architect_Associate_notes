@@ -1,7 +1,7 @@
 - RDS stands for Relational Database Service
 - It’s a managed DB service for DB use SQL as a query language. 
 - It allows you to create databases in the cloud that are managed by AWS like - Postgres, MySQL, MariaDB, Oracle, Microsoft SQL Server, Aurora (AWS Proprietary database)
-
+-  Multi-Master is not supported by red ( supported by aurora )
 ### Advantage over using RDS versus deploying DB on EC2
 - RDS is a managed service:
 - Automated provisioning, OS patching
