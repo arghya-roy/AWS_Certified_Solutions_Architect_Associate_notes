@@ -36,6 +36,7 @@
 
 ### RDS Read Replicas -
 - Up to 5 Read Replicas ( 1 write and 5 read )
+- In the backgroud RDS takes snapshot then create read only db from the snapshot.
 - Within AZ, Cross AZ or Cross Region
 - Replication is ASYNC, so reads are eventually consistent ( Eventtually consistent means it will give outpyt before sync of every replicas )
 - Replicas can be promoted to their own DB
@@ -53,6 +54,7 @@
 - For RDS Read Replicas within the same region, you don’t pay that fee
 - When read replicas are in same region then no replication fees, but when in different region then have to pay.
 - Also no replivcation cost when replicas are present inside different az of same region.
+- You can create read replicas in different region
 
 ### RDS Multi AZ (Disaster Recovery)
 - SYNC replication
@@ -128,3 +130,15 @@ instances) – it controls which IP / security group can communicate with RDS
 - No manual OS patching
 - No way to audit the underlying instance
 
+---
+## An Amazon RDS Read Replica is being deployed in a separate region. The master database is not encrypted but all data in the new region must be encrypted. How can this be achieved?
+### ANS - 
+- Encrypt a snapshot from the master DB instance, create a new encrypted master DB instance, and then create an encrypted cross-region Read Replica.
+- You cannot create an encrypted Read Replica from an unencrypted master DB instance. You also cannot enable encryption after launch time for the master DB instance. Therefore, you must create a new master DB by taking a snapshot of the existing DB, encrypting it, and then creating the new DB from the snapshot. You can then create the encrypted cross-region Read Replica of the master DB.
+
+## A company uses an Amazon RDS MySQL database instance to store customer order data. The security team have requested that SSL/TLS encryption in transit must be used for encrypting connections to the database from application servers. The data in the database is currently encrypted at rest using an AWS KMS key. How can a Solutions Architect enable encryption in transit?
+### ANS -
+- Download the AWS-provided root certificates. Use the certificates when connecting to the RDS DB instance.
+- Amazon RDS creates an SSL certificate and installs the certificate on the DB instance when Amazon RDS provisions the instance. These certificates are signed by a certificate authority. The SSL certificate includes the DB instance endpoint as the Common Name (CN) for the SSL certificate to guard against spoofing attacks. You can download a root certificate from AWS that works for all Regions or you can download Region-specific intermediate certificates.
+- You cannot use self-signed certificates with RDS.
+- 
