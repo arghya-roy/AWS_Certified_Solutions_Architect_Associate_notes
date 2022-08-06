@@ -1,3 +1,4 @@
+- The S3 managed keys will be AES-256 (not AES-128) bit keys
 ### What is S3 Select?
 Amazon S3 Select is new feature that allows you to perform simple SQL operations against your raw data stored in S3. One of the requirements is that your data needs to be in a structured format, i.e. JSON, CSV, Parquet. Do note that it will also work on compressed version of files so you don’t need to decompress them before reading.
 S3 Select is a completely serverless solution. You don’t provision any servers or databases to make this run. </br>
@@ -39,3 +40,13 @@ Create an IAM policy that applies folder-level permissions and Create an IAM gro
 - To encrypt an object at the time of upload, you need to add a header called x-amz-server-side-encryption to the request to tell S3 to encrypt the object using SSE-C, SSE-S3, or SSE-KMS.
 - To enforce object encryption, create an S3 bucket policy that denies any S3 Put request that does not include the x-amz-server-side-encryption header. There are two possible values for the x-amz-server-side-encryption header: AES256, which tells S3 to use S3-managed keys, and aws:kms, which tells S3 to use AWS KMS–managed keys.
 -  "Create a bucket policy that denies Put requests that do not have an **aws:Secure Transport header set to true**" is incorrect. This header is used for SSL/TLS.
+
+## A customer has a public-facing web application hosted on a single Amazon Elastic Compute Cloud (EC2) instance serving videos directly from an Amazon S3 bucket. Which of the following will restrict third parties from directly accessing the video assets in the bucket?
+### ANS -
+- Use a bucket policy to only allow referrals from the main website URL.
+- "Use a bucket policy to only allow the public IP address of the Amazon EC2 instance hosting the customer website" is incorrect. You can use condition statements in a bucket policy to restrict access via IP address. However, using the referrer condition in a bucket policy is preferable as it is a best practice to use DNS names / URLs instead of hard-coding IPs whenever possible.
+- To allow read access to the S3 video assets from the public-facing web application, you can add a bucket policy that allows s3:GetObject permission with a condition, using the aws:referer key, that the get request must originate from specific webpages. This is a good answer as it fully satisfies the objective of ensuring the that EC2 instance can access the videos but direct access to the videos from other sources is prevented.
+
+## A Solutions Architect works for a systems integrator running a platform that stores medical records. The government security policy mandates that patient data that contains personally identifiable information (PII) must be encrypted at all times, both at rest and in transit. Amazon S3 is used to back up data into the AWS cloud. How can the Solutions Architect ensure the medical records are properly secured? (choose 2)
+- Enable Server Side Encryption with S3 managed keys on an S3 bucket using AES-256 and Before uploading the data to S3 over HTTPS, encrypt the data locally using your own encryption keys
+
