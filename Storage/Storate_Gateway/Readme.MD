@@ -1,2 +1,4 @@
 - Storage Gateway provides a standard set of storage protocols such as iSCSI, SMB, and NFS, which allow you to use AWS storage without rewriting your existing applications.
 - Must read - https://digitalcloud.training/amazon-fsx/
+- The iSCSI protocol is used by AWS Storage Gateway Volume Gateways.
+- iSCSI-virtual tape library (VTL) protocol is used by AWS Storage tape Gateway.
