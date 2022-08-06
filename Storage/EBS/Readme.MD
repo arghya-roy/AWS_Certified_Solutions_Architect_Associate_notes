@@ -57,3 +57,7 @@ Magnetic (standard) volumes are best suited for workloads where data is accessed
 - Throughput (MiB/s) is Not applicable
 - EBS Multi-attach not Supported
 - Can be boot volume?	no
+--
+- Data in transit between an instance and an encrypted volume is also encrypted.
+- All EBS types and all instance families support encryption but not all instance types support encryption.
+
