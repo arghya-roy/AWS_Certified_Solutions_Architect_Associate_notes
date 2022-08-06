@@ -1,6 +1,19 @@
 - The Amazon Elastic File System (EFS) is the only storage solution in the list that provides a file system interface. It also supports millions of files as requested.
 - EFS uses NFS (Network File System) protocol and FsX uses SMB (Server Message Block) protocol.
 - EFS and FsX both are file system not block.
+## EFS Storage class -
+### EFS Standard -
+- Frequently accessed data requiring the highest durability and availability.
+- copies in 3 or more than 3 AZ
+### EFS Standard–Infrequent Access (IA) -
+- Long lived, infrequently accessed data requiring the highest durability and availability.
+- copies in 3 or more than 3 AZ
+### EFS One Zone -
+- Frequently accessed data that doesn’t require highest levels of durability and availability.
+- copies in 1 AZ
+### EFS One Zone-IA -
+- Long lived, infrequently accessed data that doesn’t require highest levels of durability and availability.
+- copies in 1 AZ
 ---
 ## A Solutions Architect needs to design a solution for providing a shared file system for company users in the AWS Cloud. The solution must be fault tolerant and should integrate with the company’s Microsoft Active Directory for access control. Which storage solution meets these requirements?
 ### ANS -
