@@ -15,3 +15,7 @@ S3 Select is a lightweight solution designed to let you use SQL to perform simpl
 ## A company has over 2000 users and is planning to migrate data into the AWS Cloud. Some of the data is user’s home folders on an existing file share and the plan is to move this data to Amazon S3. Each user will have a folder in a shared bucket under the folder structure: bucket/home/%username%. What steps should a Solutions Architect take to ensure that each user can access their own home folder and no one else’s? (choose 2)
 ### ANS -
 Create an IAM policy that applies folder-level permissions and Create an IAM group and attach the IAM policy, add IAM users to the group.
+## An application stores encrypted data in Amazon S3 buckets. A Solutions Architect needs to be able to query the encrypted data using SQL queries and write the encrypted results back the S3 bucket. As the data is sensitive fine-grained control ( Fine-grained access control is a method of controlling who can access certain data ) must be implemented over access to the S3 bucket. What combination of services represent the BEST options support these requirements? (choose 2)
+### ANS -
+- Use IAM policies to restrict access to the bucket.
+- Use Athena for querying the data and writing the results back to the bucket
