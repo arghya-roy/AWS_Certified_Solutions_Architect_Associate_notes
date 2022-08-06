@@ -32,3 +32,10 @@ Create an IAM policy that applies folder-level permissions and Create an IAM gro
 ### ANS -
 - Launch an Amazon EC2 instance in the same Region as the S3 bucket. Process the log files and upload the output to another S3 bucket in the same Region.
 - "Connect an AWS Lambda function to the S3 bucket via a VPC endpoint. Process the log files and store the output to another S3 bucket in the same Region" is incorrect. You cannot install a Linux-based software application on AWS Lambda. For lambda we can select runtime, we can not select operating system
+
+## An Amazon S3 bucket is going to be used by a company to store sensitive data. A Solutions Architect needs to ensure that all objects uploaded to an Amazon S3 bucket are encrypted. How can this be achieved?
+### ANS -
+- Create a bucket policy that denies Put requests that do not have an **x-amz-server-side-encryption** header set.
+- To encrypt an object at the time of upload, you need to add a header called x-amz-server-side-encryption to the request to tell S3 to encrypt the object using SSE-C, SSE-S3, or SSE-KMS.
+- To enforce object encryption, create an S3 bucket policy that denies any S3 Put request that does not include the x-amz-server-side-encryption header. There are two possible values for the x-amz-server-side-encryption header: AES256, which tells S3 to use S3-managed keys, and aws:kms, which tells S3 to use AWS KMS–managed keys.
+-  "Create a bucket policy that denies Put requests that do not have an **aws:Secure Transport header set to true**" is incorrect. This header is used for SSL/TLS.
