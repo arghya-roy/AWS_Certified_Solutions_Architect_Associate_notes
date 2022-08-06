@@ -1,5 +1,5 @@
 - An instance store provides temporary (non-persistent) block-level storage for your instance.
-
+- ephemeral storage is also known as instance store.
 - This is different to EBS which provides persistent storage but is also a block storage service that can be a root or additional volume.
 
 - Instance store storage is located on disks that are physically attached to the host computer.
