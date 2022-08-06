@@ -39,7 +39,7 @@ Amazon S3 access control lists (ACLs) enable you to manage access to S3 buckets 
 - ACLs were the first authorization mechanism in S3. Bucket policies are the newer method, and the method used for almost all AWS services. Policies can implement very   complex rules and permissions, ACLs are simplistic (they have ALLOW but no DENY). To manage S3 you need a solid understanding of both.
 ### bucket policy vs iam policy which one takes the precedence? 
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/arghya-roy/AWS_Certified_Solutions_Architect_Associate_notes/blob/main/Storage/S3/Screenshot%20(10)..png)
 --
 ## A company has over 2000 users and is planning to migrate data into the AWS Cloud. Some of the data is user’s home folders on an existing file share and the plan is to move this data to Amazon S3. Each user will have a folder in a shared bucket under the folder structure: bucket/home/%username%. What steps should a Solutions Architect take to ensure that each user can access their own home folder and no one else’s? (choose 2)
 ### ANS -
