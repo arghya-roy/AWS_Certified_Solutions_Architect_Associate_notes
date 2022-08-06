@@ -28,3 +28,7 @@ Create an IAM policy that applies folder-level permissions and Create an IAM gro
 ## A Solutions Architect would like to store a backup of an Amazon EBS volume on Amazon S3. What is the easiest way of achieving this?
 ### ANS -
 - Create a snapshot of the volume. ( Snapshots capture a point-in-time state of an instance. Snapshots of Amazon EBS volumes are stored on S3 by design so you only need to take a snapshot and it will automatically be stored on Amazon S3. )
+## A company has over 200 TB of log files in an Amazon S3 bucket. The company must process the files using a Linux-based software application that will extract and summarize data from the log files and store the output in a separate Amazon S3 bucket. The company needs to minimize data transfer charges associated with the processing of this data. How can a Solutions Architect meet these requirements?
+### ANS -
+- Launch an Amazon EC2 instance in the same Region as the S3 bucket. Process the log files and upload the output to another S3 bucket in the same Region.
+- "Connect an AWS Lambda function to the S3 bucket via a VPC endpoint. Process the log files and store the output to another S3 bucket in the same Region" is incorrect. You cannot install a Linux-based software application on AWS Lambda. For lambda we can select runtime, we can not select operating system
