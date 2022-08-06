@@ -21,8 +21,25 @@ Amazon S3 Transfer Acceleration is a bucket-level feature that enables fast, eas
 - However, (a) creating a CloudFront distribution with an origin pointing to your S3 bucket and (b) enabling S3 Transfer acceleration for your bucket - are two different things serving two different purposes.
 - When you create a CloudFront distribution with an origin pointing to your S3 bucket, you enable caching on Edge locations. Consequent requests to the same objects will be served from the Edge cache which is faster for the end user and also reduces the load on your origin. CloudFront is primarily used as a content delivery service.
 - When you enable S3 Transfer Acceleration for your S3 bucket and use <bucket>.s3-accelerate.amazonaws.com instead of the default S3 endpoint, the transfers are performed via the same Edge locations, but the network path is optimized for long-distance large-object uploads. Extra resources and optimizations are used to achieve higher throughput. No caching on Edge locations.
+  
+## Access control -
+### IAM policy for s3 -
+It will be attached with user. The S3 Access IAM policy grants an IAM role the permission to access the specified S3 bucket. An IAM role requires a minimum level of permissions set in its policy in order for Aspera to upload, download, or list contents in an S3 buckets.
 
+### Bucket policy -
+It will be attached with bucket. A bucket policy is a resource-based AWS Identity and Access Management (IAM) policy. You add a bucket policy to a bucket to grant other AWS accounts or IAM users access permissions for the bucket and the objects in it. Object permissions apply only to the objects that the bucket owner creates.
 
+### Amazon S3 access control lists (ACLs) -
+Amazon S3 access control lists (ACLs) enable you to manage access to S3 buckets and objects. Every S3 bucket and object has an ACL attached to it as a subresource. The ACLs define which AWS accounts or groups are granted access along with the type of access.
+
+### S3 bucket policy vs access control list (ACLs) - 
+- Access Control Lists (ACLs) are legacy (but not deprecated). bucket/IAM policies are recommended by AWS.
+- ACLs give control over buckets AND objects, bucket policies are only at the bucket level.
+- If you want to implement fine grained control over individual objects in your bucket use ACLs. If you want to implement global control, such as making an entire bucket public, use policies.
+- ACLs were the first authorization mechanism in S3. Bucket policies are the newer method, and the method used for almost all AWS services. Policies can implement very   complex rules and permissions, ACLs are simplistic (they have ALLOW but no DENY). To manage S3 you need a solid understanding of both.
+### bucket policy vs iam policy which one takes the precedence? 
+
+![alt text](http://url/to/img.png)
 --
 ## A company has over 2000 users and is planning to migrate data into the AWS Cloud. Some of the data is user’s home folders on an existing file share and the plan is to move this data to Amazon S3. Each user will have a folder in a shared bucket under the folder structure: bucket/home/%username%. What steps should a Solutions Architect take to ensure that each user can access their own home folder and no one else’s? (choose 2)
 ### ANS -
