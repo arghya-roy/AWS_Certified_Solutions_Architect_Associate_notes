@@ -63,4 +63,12 @@ Magnetic (standard) volumes are best suited for workloads where data is accessed
 
 ## A company has multiple AWS accounts for several environments (Prod, Dev, Test etc.). A Solutions Architect would like to copy an Amazon EBS snapshot from DEV to PROD. The snapshot is from an EBS volume that was encrypted with a custom key. What steps must be performed to share the encrypted EBS snapshot with the Prod account? (choose 2)
 ### ANS -
-- Share the custom key used to encrypt the volume and Modify the permissions on the encrypted snapshot to share it with the Prod account
+- Share the custom key used to encrypt the volume and Modify the permissions on the encrypted snapshot to share it with the Prod account.
+
+## A Solutions Architect is attempting to clean up unused EBS volumes and snapshots to save some space and cost. How many of the most recent snapshots of an EBS volume need to be maintained to guarantee that you can recreate the full EBS volume from the snapshot?
+### ANS -
+- Only the most recent snapshot. Snapshots are incremental, but the deletion process will ensure that no data is lost.
+## A Solutions Architect would like to implement a method of automating the creation, retention, and deletion of backups for the Amazon EBS volumes in an Amazon VPC. What is the easiest way to automate these tasks using AWS tools?
+### ANS -
+- Use the EBS Data Lifecycle Manager (DLM) to manage snapshots of the volumes
+- "Create a scheduled job and run the AWS CLI command “create-snapshot” to take backups of the EBS volumes" is incorrect. This is not the easiest method, DLM would be a much better solution.
