@@ -1,4 +1,7 @@
-
+### IOPS - 
+Input/output operations per second is an input/output performance measurement used to characterize computer storage devices like hard disk drives, solid state drives, and storage area networks.
+### Throughput -
+Throughput is the measure of the amount of data transferred from/to a storage device in a second. Typically stated in KB/MB/GB/s 
 ## General Purpose SSD -
 General Purpose SSD (gp2 and gp3) volumes offer cost-effective storage that is ideal for a broad range of workloads.
 ### General Purpose SSD (gp2) - 
