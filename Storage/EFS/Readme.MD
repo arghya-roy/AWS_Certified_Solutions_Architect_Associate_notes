@@ -1,1 +1,1 @@
-.
+- The Amazon Elastic File System (EFS) is the only storage solution in the list that provides a file system interface. It also supports millions of files as requested.
