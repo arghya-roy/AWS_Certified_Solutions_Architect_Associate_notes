@@ -61,3 +61,6 @@ Magnetic (standard) volumes are best suited for workloads where data is accessed
 - Data in transit between an instance and an encrypted volume is also encrypted.
 - All EBS types and all instance families support encryption but not all instance types support encryption.
 
+## A company has multiple AWS accounts for several environments (Prod, Dev, Test etc.). A Solutions Architect would like to copy an Amazon EBS snapshot from DEV to PROD. The snapshot is from an EBS volume that was encrypted with a custom key. What steps must be performed to share the encrypted EBS snapshot with the Prod account? (choose 2)
+### ANS -
+- Share the custom key used to encrypt the volume and Modify the permissions on the encrypted snapshot to share it with the Prod account
