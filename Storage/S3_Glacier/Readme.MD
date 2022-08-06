@@ -1,1 +1,5 @@
-.
+- Glacier is designed for durability of 99.999999999% of objects across multiple Availability Zones ( in single region by default, you can configure Cross refion replication)
+- Data is resilient in the event of one entire Availability Zone destruction.
+- Glacier supports SSL for data in transit and encryption of data at rest. 
+- Glacier is extremely low cost and is ideal for long-term archival.
+- Glacier is “designed for” availability of 99.99%
