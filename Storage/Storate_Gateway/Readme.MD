@@ -1,1 +1,2 @@
-Must read - https://digitalcloud.training/amazon-fsx/
+- Storage Gateway provides a standard set of storage protocols such as iSCSI, SMB, and NFS, which allow you to use AWS storage without rewriting your existing applications.
+- Must read - https://digitalcloud.training/amazon-fsx/
