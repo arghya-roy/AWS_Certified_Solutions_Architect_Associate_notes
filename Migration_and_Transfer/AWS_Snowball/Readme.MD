@@ -1,1 +1,7 @@
-.
+## A company has 200 TB of video files stored in an on-premises data center that must be moved to the AWS Cloud within the next four weeks. The company has around 50 Mbps of available bandwidth on an Internet connection for performing the transfer. What is the MOST cost-effective solution for moving the data within the required timeframe?
+### ANS -
+- Order multiple AWS Snowball devices to migrate the data to AWS.
+- To move 200 TB of data over a 50 Mbps link would take over 300 days. Therefore, the solution must avoid the Internet link. The most cost-effective solution is to use multiple AWS Snowball devices to migrate the data to AWS. Snowball devices are shipped to your data center where you can load the data and then ship it back to AWS. This avoids the Internet connection and utilizes local high-bandwidth network connections to load the data.
+- "Use Amazon S3 Transfer Acceleration to securely upload the data" is incorrect. This would use the Internet link and would not meet the required timeframe.
+- "Create a virtual private gateway and connect a VPN to upload the data" is incorrect. This would also use the Internet link and would not meet the required timeframe.
+- "Use AWS Snowmobile to migrate the data to AWS" is incorrect. This is a very large device on the back of a truck that is used for moving huge quantities of data. It would be very expensive for moving just 200 TB of data.
