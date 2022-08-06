@@ -19,3 +19,12 @@ Create an IAM policy that applies folder-level permissions and Create an IAM gro
 ### ANS -
 - Use IAM policies to restrict access to the bucket.
 - Use Athena for querying the data and writing the results back to the bucket
+
+## An application will gather data from a website hosted on an EC2 instance and write the data to an S3 bucket. The application will use API calls to interact with the EC2 instance and S3 bucket. Which Amazon S3 access control method will be the MOST operationally efficient? (choose 2)
+### ANS -
+- Grant programmatic access.
+- Create an IAM policy.
+
+## A Solutions Architect would like to store a backup of an Amazon EBS volume on Amazon S3. What is the easiest way of achieving this?
+### ANS -
+- Create a snapshot of the volume. ( Snapshots capture a point-in-time state of an instance. Snapshots of Amazon EBS volumes are stored on S3 by design so you only need to take a snapshot and it will automatically be stored on Amazon S3. )
