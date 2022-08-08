@@ -6,6 +6,8 @@
 
 ### Amazon FSx for Lustre used for Machine Learning, High Performance Computing (HPC), Video Processing, Financial Modeling, Electronic Design Automation, S3 integration.
 
+### Answer will be amazon fsx if there is any active directory stuff in file system.
+
 ## Amazon FsX
 - Amazon FSx provides fully managed third-party file systems.
 
