@@ -1,6 +1,21 @@
 - With a gateway vpc endpoint you configure your route table to point to the endpoint. Amazon S3 and DynamoDB use gateway endpoints.
 - Dynamodb does not take any downtime for scaling vertically. ( where rds and aurora take downtime, It will take less time when multiaz enables but will take downtime)
 - dynamodb Store objects larger than 400KB in S3 and use pointers in DynamoDB
+
+## DynamoDB Overview
+- AWS proprietary technology, managed NoSQL database
+- Serverless, provisioned capacity, auto scaling, on demand capacity (Nov 2018)
+- Can replace ElastiCache as a key/value store (storing session data for example)
+- Highly Available, Multi AZ by default, Read and Writes are decoupled, DAX for read cache
+- Reads can be eventually consistent or strongly consistent or transactional
+- Security, authentication and authorization is done through IAM
+- DynamoDB Streams to integrate with AWS Lambda
+- Backup / Restore feature, Global Table feature
+- Monitoring through CloudWatch
+- Can only query on primary key, sort key, or indexes
+
+
+
 ## DynamoDB Streams -
 - Amazon DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
 - Every time an item in an Amazon DynamoDB table is modified, ceated, deleted, then the log is stored in dynamodb stream for 24 hrs.
