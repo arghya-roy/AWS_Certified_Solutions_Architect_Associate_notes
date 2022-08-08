@@ -58,7 +58,7 @@
 - Useful for group file shares and home directorie.
 - We know that storage file gateway uses s3 to store files but here FSX file gateway uses fsx to store files.
 - See diagram 
-- ![alt text]([http://url/to/img.png](https://github.com/arghya-roy/AWS_Certified_Solutions_Architect_Associate_notes/blob/main/Storage/Storate_Gateway/WhatsApp%20Image%202022-08-08%20at%205.51.06%20PM.jpeg))
+- ![alt text][http://url/to/img.png](https://github.com/arghya-roy/AWS_Certified_Solutions_Architect_Associate_notes/blob/main/Storage/Storate_Gateway/WhatsApp%20Image%202022-08-08%20at%205.51.06%20PM.jpeg)
 
 
 
