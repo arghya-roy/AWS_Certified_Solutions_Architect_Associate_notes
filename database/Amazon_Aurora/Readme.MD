@@ -1,6 +1,22 @@
 ## Amazon Aurora
 Amazon Aurora is a fully managed MySQL- and PostgreSQL-compatible relational database built for the cloud that combines the performance and availability of traditional enterprise databases with the simplicity and cost-effectiveness of open source databases. ( Amazon RDS (Relational Database Service) is a managed SQL database service a relational database in cloud which makes it easy to provision, setup, patching, and backups. It supports Aurora, MySQL, PostgreSQL, MariaDB, Microsoft SQL Server, and Oracle database engines. ).
 
+- Compatible API for PostgreSQL / MySQL 
+- Data is held in 6 replicas, across 3 AZ 
+- Auto healing capability 
+- Multi AZ
+- Auto Scaling Read Replicas 
+- Read Replicas can be Global 
+- Aurora database can be Global for DR or latency purposes 
+- Auto scaling of storage from 10GB to 128 TB 
+- Define EC2 instance type for aurora instances 
+- Same security / monitoring / maintenance features as RDS 
+- Aurora Serverless – for unpredictable / intermittent workloads 
+- Aurora Multi-Master – for continuous writes failover 
+- Use case: same as RDS, but with less maintenance / more flexibility / more performance
+
+
+
 
 ### Storage -
 - RDS use Amazon EBS volumes for database and log storage. To achieve reliability, you need to enable the Multi-AZ feature on your RDS instance and replicate it synchronously to a standby replica in another Availability Zone.
@@ -66,7 +82,8 @@ Aurora is more expensive than RDS for the same workloads. Aurora pricing is main
 
 - Aurora backs up your cluster volume automatically and retains restore data for the length of the backup retention period. Aurora backups are continuous and incremental so you can quickly restore to any point within the backup retention period. No performance impact or interruption of database service occurs as backup data is being written.
 
-
+###  Security: 
+- AWS responsible for OS security, we are responsible for setting up KMS, security groups, IAM policies, authorizing users in DB, using SSL
 
 ## Aurora Global Database -
 - Amazon Aurora Global Database is designed for globally distributed applications, allowing a single Amazon Aurora database to span multiple AWS regions. It replicates your data with no impact on database performance, enables fast local reads with low latency in each region, and provides disaster recovery from region-wide outages.
