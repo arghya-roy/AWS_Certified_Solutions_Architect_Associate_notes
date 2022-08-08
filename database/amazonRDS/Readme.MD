@@ -34,6 +34,22 @@
 - Useful for applications with unpredictable workloads 
 - Supports all RDS database engines (MariaDB, MySQL, PostgreSQL, SQL Server, Oracle)
 
+### backup and aws snapshot -
+- We can manually do snapshot.
+- aws also has feature to backup automatically in backup window. So that is called backup. But in the background the aws backup is also creating snapshot.
+
+
+### Recovery Point Objective (RPO) and Recovery Time Objective (RTO) -
+- Recovery Point Objective (RPO) and Recovery Time Objective (RTO) are two important parameters of a disaster recovery or data protection plan.
+
+- RPO describes the time duration in which your company may loose data before a disaster strikes. And, RTO describes the time duration that requires to recover data after an incident happens. Both RTO and RPO are measured in time, it could be in a minutes, hours, days or weeks.
+
+- In a simple meaning, RTO is a time between last available backup and disaster where RPO is a time between disaster and systems recovery.
+
+- Let’s say, RPO is 10 hours and the last available good copy of data is from 8 hours ago, then we are still within the parameters of the Business Continuity Plan’s RPO.
+
+- If RTO is 10 hours (your business can survive with systems down for this amount of time), then you have to make sure that the system can be recovered quickly or within the time frame.
+
 ### RDS Read Replicas -
 - Up to 5 Read Replicas ( 1 write and 5 read )
 - In the backgroud RDS takes snapshot then create read only db from the snapshot.
@@ -44,6 +60,7 @@
 - Assume we have one read and write ( main1) and three read replicas ( r1, r2, r3 ). Then data will be replicated from main1 to r1 then r1 to r2 then r2 to r3.
 - Read replicas can solve latency problem.
 - But read replica does not give sub milisecond result. for that cases you can use elasticache.
+
 ### RDS Read Replicas use cases -
 - You have a production database that is taking on normal load
 - You want to run a reporting application to run some analytics
