@@ -1,3 +1,5 @@
+### Use case - Suppose you are uploading some videos in s3. And from frontend (like youtube) you want to receive the videos from s3. Then you can upload the metadata means title, thumbnail, time details inside elasticsearch. After that with frontend search bar you attached the elastic search to receive videos from s3.
+
 - You can compare Amazon ES with apache solr.
 - amazon elastic search is a managed opensearch.
 - Amazon OpenSearch Service makes it easy for you to perform interactive log analytics, real-time application monitoring, website search, and more. 
