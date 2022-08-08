@@ -1,6 +1,31 @@
 - The Amazon Elastic File System (EFS) is the only storage solution in the list that provides a file system interface. It also supports millions of files as requested.
 - EFS uses NFS (Network File System) protocol and FsX uses SMB (Server Message Block) protocol.
 - EFS and FsX both are file system not block.
+- Managed NFS (network file system) that can be mounted on many EC2
+- EFS works with EC2 instances in multi-AZ
+- Highly available, scalable, expensive (3x gp2), pay per use 
+- Use cases: content management, web serving, data sharing, Wordpress
+- Uses NFSv4.1 protocol
+- Uses security group to control access to EFS
+- Compatible with Linux based AMI (not Windows)
+- Encryption at rest using KMS
+- POSIX file system (~Linux) that has a standard file API
+- File system scales automatically, pay-per-use, no capacity planning
+
+## EFS – Performance & Storage Classes
+
+### EFS Scale
+- 1000s of concurrent NFS clients, 10 GB+ /s throughput
+- Grow to Petabyte-scale network file system, automatically
+
+### Performance mode (set at EFS creation time)
+- General purpose (default): latency-sensitive use cases (web server, CMS, etc…)
+- Max I/O – higher latency, throughput, highly parallel (big data, media processing)
+
+### Throughput mode
+- Bursting (1 TB = 50MiB/s + burst of up to 100MiB/s)
+- Provisioned: set your throughput regardless of storage size, ex: 1 GiB/s for 1 TB storag
+
 ## EFS Storage class -
 ### EFS Standard -
 - Frequently accessed data requiring the highest durability and availability.
