@@ -56,7 +56,7 @@ in advance any capacity – can use auto scaling)
 The read/write capacity mode controls how you are charged for read and write throughput and how you manage capacity. DynamoDB has two read/write capacity modes for processing reads and writes on your tables: provisioned (default, free-tier eligible) and on-demand.
 
 ### Provisioned
-If you choose provisioned mode, you specify the number of reads and writes per second that you need for your application. You can use auto scaling to adjust your table's provisioned capacity automatically in response to traffic changes. This helps you govern your DynamoDB use to stay at or below a defined request rate in order to obtain cost predictability.
+If you choose provisioned mode, you specify the number of reads and writes per second that you need for your application. You can use auto scaling to adjust your table's provisioned capacity automatically in response to traffic changes. This helps you govern your DynamoDB use to stay at or below a defined request rate in order to obtain cost predictability.  ( For provisioned if you hardcoded that 2 rcu per sec, then still if you dont use 2 rcu per sec still you have to give bill for that ).
 
 ### On-demand
 On-demand mode is a flexible billing option capable of serving thousands of requests per second without capacity planning. DynamoDB on-demand offers pay-per-request pricing for read and write requests so that you pay only for what you use.
