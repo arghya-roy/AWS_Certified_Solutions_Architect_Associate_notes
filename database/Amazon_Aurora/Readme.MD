@@ -1,6 +1,6 @@
 ## Amazon Aurora
 Amazon Aurora is a fully managed MySQL- and PostgreSQL-compatible relational database built for the cloud that combines the performance and availability of traditional enterprise databases with the simplicity and cost-effectiveness of open source databases. ( Amazon RDS (Relational Database Service) is a managed SQL database service a relational database in cloud which makes it easy to provision, setup, patching, and backups. It supports Aurora, MySQL, PostgreSQL, MariaDB, Microsoft SQL Server, and Oracle database engines. ).
-
+- It can support multi az read replica also means you can crate read replica inside multiple available zone in same region.
 - Compatible API for PostgreSQL / MySQL 
 - Data is held in 6 replicas, across 3 AZ 
 - Auto healing capability 
