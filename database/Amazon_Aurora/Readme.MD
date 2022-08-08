@@ -98,7 +98,16 @@ Aurora is more expensive than RDS for the same workloads. Aurora pricing is main
 ## Aurora Serverless
 - Aurora Serverless lets you run Aurora without having to guess how many compute nodes you need. It automatically starts and stops nodes to match the needs of your application. It scales up to meet a spike in demand and scales down when things are quiet. The data remains in the shared storage volume, independent of any scaling.
 
+### Recovery Point Objective (RPO) and Recovery Time Objective (RTO) -
+- Recovery Point Objective (RPO) and Recovery Time Objective (RTO) are two important parameters of a disaster recovery or data protection plan.
 
+- RPO describes the time duration in which your company may loose data before a disaster strikes. And, RTO describes the time duration that requires to recover data after an incident happens. Both RTO and RPO are measured in time, it could be in a minutes, hours, days or weeks.
+
+- In a simple meaning, RTO is a time between last available backup and disaster where RPO is a time between disaster and systems recovery.
+
+- Let’s say, RPO is 10 hours and the last available good copy of data is from 8 hours ago, then we are still within the parameters of the Business Continuity Plan’s RPO.
+
+- If RTO is 10 hours (your business can survive with systems down for this amount of time), then you have to make sure that the system can be recovered quickly or within the time frame.
 
 
 
