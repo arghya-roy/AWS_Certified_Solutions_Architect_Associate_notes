@@ -52,6 +52,16 @@ in advance any capacity – can use auto scaling)
 - **Standard-IA** The DynamoDB Standard-Infrequent Access (DynamoDB Standard-IA) table class is optimized for tables where storage is the dominant cost. For example, tables that store infrequently accessed data, such as application logs, old social media posts, e-commerce order history, and past gaming achievements, are good candidates for the Standard-IA table class.
 
 
+## Read/write capacity
+The read/write capacity mode controls how you are charged for read and write throughput and how you manage capacity. DynamoDB has two read/write capacity modes for processing reads and writes on your tables: provisioned (default, free-tier eligible) and on-demand.
+
+### Provisioned
+If you choose provisioned mode, you specify the number of reads and writes per second that you need for your application. You can use auto scaling to adjust your table's provisioned capacity automatically in response to traffic changes. This helps you govern your DynamoDB use to stay at or below a defined request rate in order to obtain cost predictability.
+
+### On-demand
+On-demand mode is a flexible billing option capable of serving thousands of requests per second without capacity planning. DynamoDB on-demand offers pay-per-request pricing for read and write requests so that you pay only for what you use.
+
+
 ## DynamoDB Streams -
 - Amazon DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
 - Every time an item in an Amazon DynamoDB table is modified, ceated, deleted, then the log is stored in dynamodb stream for 24 hrs.
