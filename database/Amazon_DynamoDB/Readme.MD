@@ -2,7 +2,7 @@
 - Dynamodb does not take any downtime for scaling vertically. ( where rds and aurora take downtime, It will take less time when multiaz enables but will take downtime)
 - dynamodb Store objects larger than 400KB in S3 and use pointers in DynamoDB
 
-## DynamoDB Overview
+### DynamoDB Overview
 - AWS proprietary technology, managed NoSQL database
 - Serverless, provisioned capacity, auto scaling, on demand capacity (Nov 2018)
 - Can replace ElastiCache as a key/value store (storing session data for example)
@@ -13,6 +13,18 @@
 - Backup / Restore feature, Global Table feature
 - Monitoring through CloudWatch
 - Can only query on primary key, sort key, or indexes
+
+### Use Case: 
+Serverless applications development (small documents 100s KB), distributed serverless cache, doesn’t have SQL query language available, has transactions capability from Nov 2018
+
+### DynamoDB for Solutions Architect
+- Operations: no operations needed, auto scaling capability, serverless
+- Security: full security through IAM policies, KMS encryption, SSL in flight
+- Reliability: Multi AZ, Backups
+- Performance: single digit millisecond performance, DAX for caching 
+reads, performance doesn’t degrade if your application scales
+- Cost: Pay per provisioned capacity and storage usage (no need to guess 
+in advance any capacity – can use auto scaling)
 
 
 
