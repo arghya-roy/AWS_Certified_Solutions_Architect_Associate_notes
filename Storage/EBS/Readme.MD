@@ -3,6 +3,18 @@ must read - https://digitalcloud.training/amazon-ebs/#ebs-volume-types
 Input/output operations per second is an input/output performance measurement used to characterize computer storage devices like hard disk drives, solid state drives, and storage area networks.
 ### Throughput -
 Throughput is the measure of the amount of data transferred from/to a storage device in a second. Typically stated in KB/MB/GB/s 
+
+
+### EBS Volumes come in 6 types
+- gp2 / gp3 (SSD): General purpose SSD volume that balances price and performance for 
+a wide variety of workloads
+- io1 / io2 (SSD): Highest-performance SSD volume for mission-critical low-latency or 
+high-throughput workloads
+- st1 (HDD): Low cost HDD volume designed for frequently accessed, throughput- intensive workloads
+- sc1 (HDD): Lowest cost HDD volume designed for less frequently accessed workloads
+
+###  For more read the slide of udemy from page 95 to 113
+
 ## General Purpose SSD -
 General Purpose SSD (gp2 and gp3) volumes offer cost-effective storage that is ideal for a broad range of workloads.
 ### General Purpose SSD (gp2) - 
