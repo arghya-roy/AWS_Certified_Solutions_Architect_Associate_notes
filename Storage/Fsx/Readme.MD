@@ -1,3 +1,4 @@
 - EFS uses NFS (Network File System) protocol and FsX uses SMB (Server Message Block) protocol.
 - EFS and FsX both are file system not block.
 - Windows file server farm uses Distributed File System Replication (DFSR) = FSX 
+- Must read - https://digitalcloud.training/amazon-fsx/
