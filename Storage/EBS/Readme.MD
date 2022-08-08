@@ -1,4 +1,6 @@
-must read - https://digitalcloud.training/amazon-ebs/#ebs-volume-types
+must read for snapshot and encryption sectrion- https://digitalcloud.training/amazon-ebs/#ebs-volume-types
+For more aboyt ebs type read the slide of udemy from page 95 to 113
+
 ### IOPS - 
 Input/output operations per second is an input/output performance measurement used to characterize computer storage devices like hard disk drives, solid state drives, and storage area networks.
 ### Throughput -
@@ -31,6 +33,11 @@ General Purpose SSD (gp2 and gp3) volumes offer cost-effective storage that is i
 - Can be boot volume?	Yes
 ## Provisioned IOPS SSD
 Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed to meet the needs of I/O-intensive workloads. They are best for EBS-optimized instances.
+
+- Critical business applications with sustained IOPS performance
+- Or applications that need more than 16,000 IOPS
+- Great for databases workloads (sensitive to storage perf and consistency)
+
 ### Provisioned IOPS SSD (io1) -
 - Size 4 GiB to 16384 GiB. 
 - 100 IOPS to 5000 IOPS and up to 50 IOPS per GiB
@@ -55,6 +62,7 @@ Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed 
 ## Throughput Optimized HDD
 - Throughput Optimized HDD (st1) volumes provide low-cost magnetic storage that is a good fit for large, sequential workloads.
 - Low-cost HDD volume, designed for frequently accessed. Throughput intensive workloads.
+- Big Data, Data Warehouses, Log Processing
 ### Throughput Optimized HDD (st1) -
 - Size 125 GiB to 16384 GiB. 
 - IOPS is not applicable.
