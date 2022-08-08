@@ -8,3 +8,40 @@
   - Which services you use the most.
   - View metrics for which AZ has the most traffic.
   - Which linked account is used the most.
+
+- You can see usage by filtering:
+   - Service
+
+   - Linked Account
+
+   - Region
+
+   - Instance Type
+
+   - Usage Type
+
+   - Usage Type Group
+
+   - Resource
+
+   - Cost Category
+
+   - Tag
+
+   - API Operation
+
+   - Charge Type
+ 
+   - Availability Zone
+
+   - Platform
+
+   - Purchase Option
+
+   - Tenancy
+
+   - Database Engine
+
+   - Legal Entity
+
+   - Billing Entity
