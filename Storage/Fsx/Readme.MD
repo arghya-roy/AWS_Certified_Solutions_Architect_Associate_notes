@@ -1,7 +1,10 @@
 - EFS uses NFS (Network File System) protocol and FsX uses SMB (Server Message Block) protocol.
 - EFS and FsX both are file system not block.
+- Mainly EFS for linux, Fsx for windows.
 - Windows file server farm uses Distributed File System Replication (DFSR) = FSX 
 - Must read - https://digitalcloud.training/amazon-fsx/
+
+### Amazon FSx for Lustre used for Machine Learning, High Performance Computing (HPC), Video Processing, Financial Modeling, Electronic Design Automation, S3 integration.
 
 ## Amazon FsX
 - Amazon FSx provides fully managed third-party file systems.
