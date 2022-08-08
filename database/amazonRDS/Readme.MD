@@ -1,3 +1,4 @@
+- It can support multi az read replica also means you can crate read replica inside multiple available zone in same region.
 - RDS stands for Relational Database Service
 - It’s a managed DB service for DB use SQL as a query language. 
 - It allows you to create databases in the cloud that are managed by AWS like - Postgres, MySQL, MariaDB, Oracle, Microsoft SQL Server, Aurora (AWS Proprietary database)
