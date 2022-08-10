@@ -203,24 +203,33 @@ We can sent all enent or specific event to eventbridge then using eventbridge ru
 - Helpful when you want to share large datasets with other accounts
 - The requester must be authenticated in AWS (cannot be anonymous)
     
+## S3 Object Lock (versioning must be enabled)
+- Adopt a WORM (Write Once Read Many) model
+- Block an object version deletion for a specified amount of time
+- Object retention:
+      - Retention Period: specifies a fixed period
+      - Legal Hold: The Object Lock legal hold operation enables you to place a legal hold on an object version. Like setting a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed.
+
+    - Modes:
+      - Governance mode: users can't overwrite or delete an object version or alter its lock settings unless they have special permissions
+      - Compliance mode: a protected object version can't be overwritten or deleted by any user, including the root user in your AWS account. When an object is locked in compliance mode, its retention mode can't be changed, and its retention period can't be shortened.
+    
+  ## Glacier Vault -
+- A vault is a container for storing archives. When you create a vault, you specify a vault name and the AWS Region in which you want to create the vault. For a list of the AWS Regions supported by S3 Glacier, see Amazon S3 Glacier endpoints and quotas in the AWS General Reference.
+    
+- Whenever you create a glacier archive then it comes in glacier vault. Because glacier archive objects store inside vault.
     
  ## Glacier Vault Lock 
 
 - Adopt a WORM (Write Once Read Many) model
 - Lock the policy for future edits (can no longer be changed)
 - Helpful for compliance and data retention
-- as an example we can create a vault lock policy which defines that object can not be deleted after that put a object there. Then the object will not deleted ever.
+- as an example we can create a vault lock policy which defines that object can not be deleted for a specific time after that put a object there. Then the object will not deleted for that period.
+- Vault Lock helps you to easily deploy and enforce compliance controls for individual S3 Glacier vaults with a Vault Lock policy. 
+
 
     
-## S3 Object Lock (versioning must be enabled)
-- Adopt a WORM (Write Once Read Many) model
-- Block an object version deletion for a specified amount of time
-- Object retention:
-      - Retention Period: specifies a fixed period
-      - Legal Hold: same protection, no expiry date
-- Modes:
-      - Governance mode: users can't overwrite or delete an object version or alter its lock settings unless they have special permissions
-      - Compliance mode: a protected object version can't be overwritten or deleted by any user, including the root user in your AWS account. When an object is locked in compliance mode, its retention mode can't be changed, and its retention period can't be shortened.
+
 
 
 ---
