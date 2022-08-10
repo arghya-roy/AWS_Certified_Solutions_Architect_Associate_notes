@@ -10,7 +10,7 @@
 - Send findings to Amazon Event Bridge
 
 ## What does AWS Inspector evaluate?
-- Remember: only for EC2 instances and container infrastructure
+- EC2, ECR Repository, ECR Image, AMI
 - Continuous scanning of the infrastructure, only when needed
 - Package vulnerabilities (EC2 & ECR) – database of CVE, Network reachability (EC2)
 - A risk score is associated with all vulnerabilities for prioritization
