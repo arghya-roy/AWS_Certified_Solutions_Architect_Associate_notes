@@ -195,11 +195,35 @@ Amazon S3 Transfer Acceleration is a bucket-level feature that enables fast, eas
 
 
 ## S3 Event Notifications -
-We can sent all 
+We can sent all enent or specific event to eventbridge then using eventbridge rule we can take action according to those enents.
+    
+## S3 – Requester Pays
+- In general, bucket owners pay for all Amazon S3 storage and data transfer costs associated with their bucket
+- With Requester Pays buckets, the requester instead of the bucket owner pays the cost of the request and the data download from the bucket
+- Helpful when you want to share large datasets with other accounts
+- The requester must be authenticated in AWS (cannot be anonymous)
+    
+    
+ ## Glacier Vault Lock 
+
+- Adopt a WORM (Write Once Read Many) model
+- Lock the policy for future edits (can no longer be changed)
+- Helpful for compliance and data retention
+- as an example we can create a vault lock policy which defines that object can not be deleted after that put a object there. Then the object will not deleted ever.
+
+    
+## S3 Object Lock (versioning must be enabled)
+- Adopt a WORM (Write Once Read Many) model
+- Block an object version deletion for a specified amount of time
+- Object retention:
+      - Retention Period: specifies a fixed period
+      - Legal Hold: same protection, no expiry date
+- Modes:
+      - Governance mode: users can't overwrite or delete an object version or alter its lock settings unless they have special permissions
+      - Compliance mode: a protected object version can't be overwritten or deleted by any user, including the root user in your AWS account. When an object is locked in compliance mode, its retention mode can't be changed, and its retention period can't be shortened.
 
 
-
-
+---
 
 - The S3 managed keys will be AES-256 (not AES-128) bit keys
 - HTTPS is mandatory for SSE-C
