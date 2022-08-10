@@ -27,3 +27,8 @@
 This group contains rules that allow you to block requests from services that allow obfuscation of viewer identity. This can include request originating from VPN, proxies, Tor nodes, and hosting providers (including AWS). This is useful if you want to filter out viewers that may be trying to hide their identity from your application. Now you can deny or allow access from those Anonymous IP list.
 
 
+### AWS Shield vs AWS WAF about DDOS
+
+- Sheild standard protect from ddos in layer 3 and 4. Shield advanced protects against layer 3, 4, 7.
+- But AWS WAF protects from ddos in layer 7 only. ( additional AWS WAF protects from SQL injection attacks, Cross-site scripting attacks, OS command injection attacks also )
+- WAF mainly works only on layer 7
