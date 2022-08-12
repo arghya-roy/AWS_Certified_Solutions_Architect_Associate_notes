@@ -1,3 +1,60 @@
+## AWS Snow Family -
+- Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS
+- We can use AWS snow familt in two ways -
+     - Data Migration
+     - Edge computing
+- AWS Snow Family: offline devices to perform data migrations
+- If it takes more than a week to transfer over the network, use Snowball devices!
+- amazon puts all data to s3 from snowball
+
+### Data Migration
+- Snowcone 
+- Snowball Edge
+- Snowmobile ( truck )
+
+### Edge computing 
+- Snowcone 
+- Snowball Edge
+
+
+### Data Migrations challenges without AWS Snow Family
+- Limited connectivity
+- Limited bandwidth
+- High network cost
+- Shared bandwidth (can’t maximize the line)
+- Connection stability
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### AWS Snowball Edge -
 AWS Snowball Edge is a type of Snowball device with on-board storage and compute power for select AWS capabilities. Snowball Edge can do local processing and edge-computing workloads in addition to transferring data between your local environment and the AWS Cloud. 
 --
