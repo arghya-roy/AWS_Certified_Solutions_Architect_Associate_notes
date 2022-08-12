@@ -25,7 +25,19 @@
 - Connection stability
 
 
-
+### Snowball Edge (for data transfers) •
+- Physical data transport solution: move TBs or PBs of data in or out
+of AWS
+- Alternative to moving data over the network (and paying network
+fees)
+- Pay per data transfer job 
+- Provide block storage and Amazon S3 compatible object storage
+- Snowball can be classified in two types 
+    - **Snowball Edge Storage Optimized**
+       - 80 TB of HDD capacity for block volume and S3 compatible object storage
+    - **Snowball Edge Compute Optimized**
+       - 42 TB of HDD capacity for block volume and S3 compatible object storage
+- Use cases: large data cloud migrations, DC decommission, disaster recovery
 
 
 
