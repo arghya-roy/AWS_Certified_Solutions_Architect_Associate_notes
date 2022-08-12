@@ -1,5 +1,5 @@
 ### AWS Transfer Family
-- A fully-managed service for file transfers ( with out aws credentials / role ) into and out of Amazon S3 or Amazon EFS using the FTP protocol
+- A fully-managed service for file transfers ( with out aws credentials / s3 api / role etc ) into and out of Amazon S3 or Amazon EFS using the FTP protocol
 - Supported Protocols
      - AWS Transfer for FTP (File Transfer Protocol (FTP))
      - AWS Transfer for FTPS (File Transfer Protocol over SSL (FTPS))
