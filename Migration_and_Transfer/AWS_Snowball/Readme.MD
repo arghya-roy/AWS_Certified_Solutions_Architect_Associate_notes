@@ -94,7 +94,9 @@ fees)
 
 
 
-
+### Solution Architecture: Snowball into Glacier
+- Snowball cannot import to Glacier directly
+- You must use Amazon S3 first, in combination with an S3 lifecycle policy
 
 
 
