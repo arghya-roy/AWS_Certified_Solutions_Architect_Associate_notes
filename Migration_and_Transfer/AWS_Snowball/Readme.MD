@@ -25,9 +25,22 @@
 - Connection stability
 
 
-### Snowball Edge (for data transfers) •
+
+### AWS Snowcone 
+- Small, portable computing, anywhere, rugged & secure, withstands harsh environments
+- Light (4.5 pounds, 2.1 kg) 
+- mgration upto TB. ( less than PB, 1 PB = 1000 TB ) 
+- Device used for edge computing, storage, and data transfer
+- 8 TBs of usable storage 
+- Use Snowcone where Snowball does not fit (space constrained environment)
+- Must provide your own battery / cables 
+- Can be sent back to AWS offline, or connect it to internet and use AWS DataSync to send data
+
+
+### Snowball Edge (for data transfers) 
 - Physical data transport solution: move TBs or PBs of data in or out
 of AWS
+- mgration upto  10 PB.
 - Alternative to moving data over the network (and paying network
 fees)
 - Pay per data transfer job 
@@ -40,10 +53,44 @@ fees)
 - Use cases: large data cloud migrations, DC decommission, disaster recovery
 
 
+### AWS Snowmobile
+
+- Transfer exabytes of data (1 EB = 1,000 PB = 1,000,000 TBs)
+- Each Snowmobile has 100 PB of capacity (use multiple in parallel)
+- High security: temperature controlled, GPS, 24/7 video surveillance
+- Better than Snowball if you transfer more than 10 PB
 
 
+## What is Edge Computing? 
+- Process data while it’s being created on an edge location
+- edge location can be a truck on the road, a ship on the sea, a mining station underground
+- We setup a Snowball Edge / Snowcone device to do edge computing
+- Use cases of Edge Computing:
+     - Preprocess data
+     - Machine learning at the edge
+     - Transcoding media streams
+• Eventually (if need be) we can ship back the device to AWS (for transferring data for example)
 
 
+## Snow Family – Edge Computing
+### Snowcone (smaller)
+- 2 CPUs, 4 GB of memory, wired or wireless access
+- USB-C power using a cord or the optional battery
+- Can run EC2 Instances & AWS Lambda functions (using AWS IoT Greengrass)
+- Long-term deployment options: 1 and 3 years discounted pricing
+
+### Snowball Edge – Compute Optimized
+- 52 vCPUs, 208 GiB of RAM
+- Optional GPU (useful for video processing or machine learning)
+- 42 TB usable storage
+- Can run EC2 Instances & AWS Lambda functions (using AWS IoT Greengrass)
+- Long-term deployment options: 1 and 3 years discounted pricing
+
+### Snowball Edge – Storage Optimized
+- Up to 40 vCPUs, 80 GiB of RAM
+- Object storage clustering available
+- Can run EC2 Instances & AWS Lambda functions (using AWS IoT Greengrass)
+- Long-term deployment options: 1 and 3 years discounted pricing
 
 
 
