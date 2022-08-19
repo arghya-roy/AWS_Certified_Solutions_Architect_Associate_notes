@@ -28,7 +28,7 @@
 - additional has Concierge Support Team 
 - Access to a Technical Account Manager (TAM)
 - Business-critical system down: < 30 minutes
-- - AWS Trusted Advisor Best Practice Checks is full set of checks
+- AWS Trusted Advisor Best Practice Checks is full set of checks
 
 ### Enterprise
 
@@ -36,3 +36,4 @@
 - Concierge Support Team (for billing and account best practices)
 - Business-critical system down: < 15 minutes
 - AWS Trusted Advisor Best Practice Checks is full set of checks
+- architectural and operational assesment
