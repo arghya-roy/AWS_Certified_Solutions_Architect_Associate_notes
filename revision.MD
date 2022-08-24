@@ -19,3 +19,13 @@
 - The instances in a partition do not share racks with the instances in the other partitions
 - Scales to 100s of EC2 instances per group.
 - Use cases: HDFS, HBase, Cassandra, Kafka
+
+
+## Protocol of amazon MQ -
+
+- MQTT, AMQT, STOMP, WSS, openwire
+- full form = managed Apache ActiveMQ
+
+## Order of SQS FIFO after visibility timeout -
+- The order remains the same: [A, B, C, D] . In fact, it is not possible to fetch another message from the queue with the same Message Group ID until message A has been processed. This ensures that the order is preserved. Where certain messages are allowed to be processed in parallel, you can specify a different Message Group ID.
+- Dead letter queue is not recommended for SQS FIFO
