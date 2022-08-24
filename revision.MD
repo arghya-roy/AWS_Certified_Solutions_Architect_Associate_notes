@@ -39,6 +39,7 @@ a wide variety of workloads
 high-throughput workloads
 - Throughput Optimized HDD ( st1 ) (HDD): Low cost HDD volume designed for frequently accessed, throughput- intensive workloads
 - Cold HDD (sc1) (HDD): Lowest cost HDD volume designed for less frequently accessed workloads
+- **ALL HAVE 99.8 TO 99.9% DURABILITY AND 0.1 TO 0.2 % FAILUARE IN YEAR. ONLY  IO2 BLOCK EXPRESS  HAS 99.999% DURABILITY AND 0.001% YEARLY FAILURE.
 
 ### Provisioned IOPS SSD (io1) -
 - Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed to meet the needs of I/O-intensive workloads. They are best for EBS-optimized instances.
