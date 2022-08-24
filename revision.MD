@@ -130,3 +130,41 @@ high-throughput workloads
 - **Layer 5—Session Layer** =
 - **Layer 6—Presentation Layer** =
 - **Layer 7—Application Layer ( HTTP/ HTTPS )** =  Application load balancer, WAF, aws shield advanced
+
+
+### Application Load Balancer (v2) Target Groups
+- EC2 instances (can be managed by an Auto Scaling Group) – HTTP 
+- ECS tasks (managed by ECS itself) – HTTP 
+- Lambda functions – HTTP request is translated into a JSON event
+- IP Addresses – must be private IPs
+- ALB can route to multiple target groups
+- Health checks are at the target group level
+
+
+### Network Load Balancer (v2)
+- Network load balancers (Layer 4) allow to:
+   - Forward TCP & UDP traffic to your instances
+   - Handle millions of request per seconds
+   - Less latency ~100 ms (vs 400 ms for ALB)
+- NLB has one static IP per AZ, and supports assigning Elastic IP
+(helpful for whitelisting specific IP)
+- NLB are used for extreme performance, TCP or UDP traffic
+- Network Load Balancer –Target Groups
+   - EC2 instances
+   - IP Addresses – must be private IPs
+   - Application Load Balancer
+
+### Gateway Load Balancer
+- Deploy, scale, and manage a fleet of 3rd party network virtual appliances in AWS
+- Example: Firewalls, Intrusion Detection and Prevention Systems, Deep Packet Inspection Systems, payload manipulation
+- Operates at Layer 3 (Network Layer) – IP ackets
+- Before sending traffic to application NLB scan it using 3rd party network virtual appliances in AWS
+- Combines the following functions:
+    - Transparent Network Gateway – single entry/exit for all traffic
+    - Load Balancer – distributes traffic to your virtual appliances
+- Uses the GENEVE protocol on port 6081
+- Gateway Load Balancer –Target Groups
+    - EC2 instances
+    - IP Addresses – must be private IPs
+
+![WhatsApp Image 2022-08-24 at 12 50 49 PM](https://user-images.githubusercontent.com/95282173/186356130-0cd410f4-018a-4c32-8bee-83131e294f0b.jpeg)
