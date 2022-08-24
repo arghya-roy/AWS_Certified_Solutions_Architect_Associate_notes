@@ -106,7 +106,9 @@ This means, NOT running 20 instances from the start.
 -  "Migrate the data on the Amazon EBS volume to an SSD-backed volume" is incorrect as the data is already on an SSD-backed volume (gp2).
 
 
+### To reduce wait time / disk wait time in ec2 host database = increase iops means provisioned IOPS SSD (io1)
 
+### To increase cpu performance in ec2 host database = change instance type
 
 
 
