@@ -44,37 +44,37 @@ high-throughput workloads
 - Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed to meet the needs of I/O-intensive workloads. They are best for EBS-optimized instances.
 - Critical business applications with sustained IOPS performance
 - Or applications that need more than 16,000 IOPS
-- Great for databases workloads (sensitive to storage perf and consistency)
-- Size 4 GiB to 16384 GiB. 
-- 100 IOPS to 5000 IOPS and up to 50 IOPS per GiB
-- Throughput (MiB/s) is Not applicable.
-- EBS Multi-attach Supported
-- Can be boot volume?	Yes
+     - Great for databases workloads (sensitive to storage perf and consistency)
+     - Size 4 GiB to 16384 GiB. 
+     - 100 IOPS to 5000 IOPS and up to 50 IOPS per GiB
+     - Throughput (MiB/s) is Not applicable.
+     - EBS Multi-attach Supported
+     - Can be boot volume?	Yes
 ### Provisioned IOPS SSD (io2) -
 - Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed to meet the needs of I/O-intensive workloads. They are best for EBS-optimized instances.
 - Critical business applications with sustained IOPS performance
 - Or applications that need more than 16,000 IOPS
-- Great for databases workloads (sensitive to storage perf and consistency)
-- Size 4 GiB to 65536 GiB. 
-- 100 IOPS to 100000 IOPS and up to 1000 IOPS per GiB
-- Throughput (MiB/s) is Not applicable.
-- EBS Multi-attach Supported
-- Can be boot volume?	Yes
+     - Great for databases workloads (sensitive to storage perf and consistency)
+     - Size 4 GiB to 65536 GiB. 
+     - 100 IOPS to 100000 IOPS and up to 1000 IOPS per GiB
+     - Throughput (MiB/s) is Not applicable.
+     - EBS Multi-attach Supported
+     - Can be boot volume?	Yes
 - 
 ### General Purpose SSD (gp2) - 
 - General Purpose SSD (gp2 and gp3) volumes offer cost-effective storage that is ideal for a broad range of workloads.
 - Size 1 GiB to 16384 GiB. 
-- 100 IOPS to 3000 IOPS and 3 IOPS per GiB.
-- Throughput (MiB/s) is Not applicable
-- EBS Multi-attach not Supported
-- Can be boot volume?	Yes
+     - 100 IOPS to 3000 IOPS and 3 IOPS per GiB.
+     - Throughput (MiB/s) is Not applicable
+     - EBS Multi-attach not Supported
+     - Can be boot volume?	Yes
 ### General Purpose SSD (gp3) - 
 - General Purpose SSD (gp2 and gp3) volumes offer cost-effective storage that is ideal for a broad range of workloads.
 - Size 1 GiB to 16384 GiB. 
-- 3000 IOPS to 16000 IOPS 
-- Throughput (MiB/s) is 125 MiB to 1000 MiB and 125 MiB/s per TiB.
-- EBS Multi-attach not Supported
-- Can be boot volume?	Yes
+     - 3000 IOPS to 16000 IOPS 
+     - Throughput (MiB/s) is 125 MiB to 1000 MiB and 125 MiB/s per TiB.
+     - EBS Multi-attach not Supported
+     - Can be boot volume?	Yes
 
 ### Throughput Optimized HDD (st1) - ( t for throughput )
 - Throughput Optimized HDD (st1) volumes provide low-cost magnetic storage that is a good fit for large, sequential workloads.
