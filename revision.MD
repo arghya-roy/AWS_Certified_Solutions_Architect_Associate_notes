@@ -120,3 +120,13 @@ high-throughput workloads
 - from standard ia and onezone ia to any = 30 days have to wait
 - from glacier instant and flexible retrival to below = 90 days to wait
 - from glacier deep archive to other = 180 days to wait
+
+
+## OSI model and AWS Service
+- **Layer 1—Physical Layer** =
+- **Layer 2—Data Link Layer** =
+- **Layer 3—Network Layer ( ip, GENEVE )** =  Gateway load balancer, aws shield standard
+- **Layer 4—Transport Layer ( TCP/UDP )** = Network load balancer, aws shield standard
+- **Layer 5—Session Layer** =
+- **Layer 6—Presentation Layer** =
+- **Layer 7—Application Layer ( HTTP/ HTTPS )** =  Application load balancer, WAF, aws shield advanced
