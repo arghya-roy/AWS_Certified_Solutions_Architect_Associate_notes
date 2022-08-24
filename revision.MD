@@ -229,5 +229,18 @@ high-throughput workloads
 ### Lead times are often longer than 1 month to establish a new connection of direct connection.
 ### to transfer data within 1 month - use snowball.
 
+### You can use CloudFront to deliver video on demand (VOD) or live streaming video using any HTTP origin. One way you can set up video workflows in the cloud is by using CloudFront together with AWS Media Services.
+
+### We can use cloudfront for static and dynamic content and on demand video and live streamig ( real time ). mainly use HTTP. 
+
+### Global Accelerator is mainly for TCP or UDP like gaming.
+
+### Cloudfront vs Global accelerator
+- You can use CloudFront to deliver video on demand (VOD) or live streaming video using any HTTP origin. CloudFront improves performance for both cacheable content (such as images and videos) and dynamic content (such as API acceleration and dynamic site delivery).
+
+- Global Accelerator improves performance for a wide range of applications over TCP or UDP by proxying packets at the edge to applications running in one or more AWS Regions. 2 Anycast IP are created for your application. Global Accelerator is a good fit for non-HTTP use cases, such as gaming (UDP), IoT (MQTT), or Voice over IP, as well as for HTTP use cases that specifically require static IP addresses or deterministic, fast regional failover. 
+
+- both services integrate with AWS Shield for DDoS protection.
+
 
 
