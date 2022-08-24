@@ -29,3 +29,4 @@
 ## Order of SQS FIFO after visibility timeout -
 - The order remains the same: [A, B, C, D] . In fact, it is not possible to fetch another message from the queue with the same Message Group ID until message A has been processed. This ensures that the order is preserved. Where certain messages are allowed to be processed in parallel, you can specify a different Message Group ID.
 - Dead letter queue is not recommended for SQS FIFO
+- Like kinesis we can order message by partition key, in the same way we can order messase in sqs using group id ( If we dont use group id in sqs fifo then whivh message comes first that will out first. )
