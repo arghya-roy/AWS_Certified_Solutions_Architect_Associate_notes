@@ -262,5 +262,8 @@ two connection from only one dx location to on-prem
 For additional resiliency, customers can also explore the use of multi-region failover. This can be done using Transit Gateway Cross Region peering and Direct Connect Gateway. One such implementation is explained in this blog https://aws.amazon.com/blogs/networking-and-content-delivery/influencing-traffic-over-hybrid-networks-using-longest-prefix-match/
 
 
+## There is no standard metric in CloudWatch for collecting EC2 memory usage. However, you can use the CloudWatch agent to collect both system metrics and log files from Amazon EC2 instances and on-premises servers. The metrics can be pushed to a CloudWatch custom metric.
 
+### Auto-scaling life cycle hook -
+ Auto Scaling group lifecycle hooks enable you to perform custom actions as the Auto Scaling group launches or terminates instances. For example, you could install or configure software on newly launched instances, or download log files from an instance before it terminates.
 
