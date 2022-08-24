@@ -109,3 +109,7 @@ high-throughput workloads
 
 
 ## EBS Encryption leverages keys from KMS (AES-256), SAME AS S3
+
+## S3 storage availability and durability -
+![image](https://user-images.githubusercontent.com/95282173/186341664-92123b54-d58e-48ce-8b14-2273f6866752.png)
+
