@@ -113,3 +113,10 @@ high-throughput workloads
 ## S3 storage availability and durability -
 ![image](https://user-images.githubusercontent.com/95282173/186341664-92123b54-d58e-48ce-8b14-2273f6866752.png)
 
+## Important -
+- Using s3 lifecycle we can go down only
+- From standard and intellegent tier to standaed IA and one zone IA = We must have to wait at least 30 days using lifecycle rule.
+- From standard and intellegent tier to any other = No need to wait
+- from standard ia and onezone ia to any = 30 days have to wait
+- from glacier instant and flexible retrival to below = 90 days to wait
+- from glacier deep archive to other = 180 days to wait
