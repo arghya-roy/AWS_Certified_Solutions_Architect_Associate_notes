@@ -45,6 +45,7 @@ high-throughput workloads
 - Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed to meet the needs of I/O-intensive workloads. They are best for EBS-optimized instances.
 - Critical business applications with sustained IOPS performance
 - Or applications that need more than 16,000 IOPS
+- Max PIOPS: 64,000 for Nitro EC2 instances & 32,000 for other
      - Great for databases workloads (sensitive to storage perf and consistency)
      - Size 4 GiB to 16384 GiB. 
      - 100 IOPS to 5000 IOPS and up to 50 IOPS per GiB
@@ -55,6 +56,7 @@ high-throughput workloads
 - Provisioned IOPS SSD (io1 and io2) volumes provide low latency and are designed to meet the needs of I/O-intensive workloads. They are best for EBS-optimized instances.
 - Critical business applications with sustained IOPS performance
 - Or applications that need more than 16,000 IOPS
+- Max PIOPS: 64,000 for Nitro EC2 instances & 32,000 for other
      - Great for databases workloads (sensitive to storage perf and consistency)
      - Size 4 GiB to 65536 GiB. 
      - 100 IOPS to 100000 IOPS and up to 1000 IOPS per GiB
