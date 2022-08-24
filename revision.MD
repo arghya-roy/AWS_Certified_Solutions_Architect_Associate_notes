@@ -76,7 +76,7 @@ high-throughput workloads
 - EBS Multi-attach not Supported
 - Can be boot volume?	Yes
 
-### Throughput Optimized HDD (st1) -
+### Throughput Optimized HDD (st1) - ( t for throughput )
 - Throughput Optimized HDD (st1) volumes provide low-cost magnetic storage that is a good fit for large, sequential workloads.
 - Low-cost HDD volume, designed for frequently accessed. Throughput intensive workloads.
 - Big Data, Data Warehouses, Log Processing
@@ -85,7 +85,7 @@ high-throughput workloads
 - Throughput (MiB/s) is 20 MiB to 123 MiB and 40 MiB/s per TiB.
 - EBS Multi-attach not Supported
 - Can be boot volume?	no
-### Cold HDD (sc1) -
+### Cold HDD (sc1) -  ( c for cold )
 - Cold HDD (sc1) volumes provide low-cost magnetic storage that offers lower throughput than st1. sc1 is a good fit for large, sequential cold-data workloads that require infrequent access to data.
 - Lowest cost HDD volume designed for less frequently accessed workloads
 - Size 125 GiB to 16384 GiB. 
