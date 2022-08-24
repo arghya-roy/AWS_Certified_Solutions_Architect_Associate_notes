@@ -267,3 +267,7 @@ For additional resiliency, customers can also explore the use of multi-region fa
 ### Auto-scaling life cycle hook -
  Auto Scaling group lifecycle hooks enable you to perform custom actions as the Auto Scaling group launches or terminates instances. For example, you could install or configure software on newly launched instances, or download log files from an instance before it terminates.
 
+
+### To reduce wait time / disk wait time in ec2 host database = increase iops means provisioned IOPS SSD (io1)
+
+### To increase cpu performance in ec2 host database = change instance type
