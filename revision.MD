@@ -208,3 +208,10 @@ high-throughput workloads
 - Include WAF in free of cost.
 - need 1 year subscription commitment.
 
+
+### S3 Encryption for Objects
+- There are 4 methods of encrypting objects in S3
+- SSE-S3: encrypts S3 objects using keys handled & managed by AWS
+- SSE-KMS: leverage AWS Key Management Service to manage encryption keys
+- SSE-C: when you want to manage your own encryption keys
+- Client Side Encryption 
