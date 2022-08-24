@@ -11,3 +11,18 @@
 - **ANS** Migrate data using AWS Snowball. Provision an AWS VPN initially and order a Direct Connect link.
 - AWS Direct Connect provides a secure, reliable and private connection. However, lead times are often longer than 1 month so it cannot be used to migrate data within the timeframes. Therefore, it is better to use AWS Snowball to move the data and order a Direct Connect connection to satisfy the other requirement later on. In the meantime the organization can use an AWS VPN for secure, private access to their VPC.
 - Because set up of direct connect will take moee than 1 month
+
+## A Solutions Architect is designing a web application that runs on Amazon EC2 instances behind an Elastic Load Balancer. All data in transit must be encrypted. Which solution options meet the encryption requirement? (choose 2)
+- Use a Network Load Balancer (NLB) with a TCP listener, then terminate SSL on EC2 instances
+- Use an Application Load Balancer (ALB) with an HTTPS listener, then install SSL certificates on the ALB and EC2 instances.
+
+## A solutions architect is optimizing a website for real-time streaming and on-demand videos. The website’s users are located around the world and the solutions architect needs to optimize the performance for both the real-time and on-demand streaming. Which service should the solutions architect choose?
+- **ANS** AWS Cloudfront
+- amazon CloudFront can be used to stream video to users across the globe using a wide variety of protocols that are layered on top of HTTP. This can include both on-demand video as well as real time streaming video.
+- "AWS Global Accelerator" is incorrect as this would be an expensive way of getting the content closer to users compared to using CloudFront. As this is a use case for CloudFront and there are so many edge locations it is the better option.
+
+## An organization is migrating data to the AWS cloud. An on-premises application uses Network File System shares and must access the data without code changes. The data is critical and is accessed frequently. Which storage solution should a Solutions Architect recommend to maximize availability and durability?
+
+- AWS Storage Gateway – File Gateway
+- AWS EFS is wrong because as per the qurstion still on prem application will access it. So for hybrid cases we will use AWS Storage Gateway – File Gateway. Also the solution asks to maximize availability and durability. The File Gateway backs off of Amazon S3 which has much higher availability and durability than EFS which is why it is the best solution for this scenario.
+-  "Amazon Simple Storage Service - S3" is incorrect. Amazon S3 does not offer an NFS interface.
