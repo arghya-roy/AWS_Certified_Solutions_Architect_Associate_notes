@@ -242,5 +242,25 @@ high-throughput workloads
 
 - both services integrate with AWS Shield for DDoS protection.
 
+### The File Gateway backs off of Amazon S3 which has much higher availability and durability than EFS.
+
+### Amazon RedShift cannot provide millisecond responsiveness. But dynamodb can provide millisecond responsiveness.
+
+## Resiliency of direct connect -
+### High Resiliency for Critical Workloads -
+  one connection from each DX location to on prem.
+  ![image](https://user-images.githubusercontent.com/95282173/186422630-580ea734-b3aa-425c-b249-a3f3848c8b44.png)
+### Maximum Resiliency for Critical Workloads -
+Two connection from each location to on prem
+![image](https://user-images.githubusercontent.com/95282173/186422757-921c7476-51b4-40b5-bf5e-42a17def9417.png)
+
+### Non-Critical Production Workloads or Development Workloads -
+two connection from only one dx location to on-prem
+![image](https://user-images.githubusercontent.com/95282173/186422983-955be12c-d789-4d7e-8a23-f0b4f9b6b68c.png)
+
+### Multi-Region Resiliency
+For additional resiliency, customers can also explore the use of multi-region failover. This can be done using Transit Gateway Cross Region peering and Direct Connect Gateway. One such implementation is explained in this blog https://aws.amazon.com/blogs/networking-and-content-delivery/influencing-traffic-over-hybrid-networks-using-longest-prefix-match/
+
+
 
 
