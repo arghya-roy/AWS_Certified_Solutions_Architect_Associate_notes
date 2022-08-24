@@ -106,3 +106,6 @@ high-throughput workloads
 - Can be boot volume?	no
 
 ## vvi ![image](https://user-images.githubusercontent.com/95282173/186339993-389fe5a1-58e7-41b5-b6a3-b87fed8773fb.png)
+
+
+## EBS Encryption leverages keys from KMS (AES-256), SAME AS S3
