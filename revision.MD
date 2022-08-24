@@ -169,6 +169,12 @@ high-throughput workloads
 
 ![WhatsApp Image 2022-08-24 at 12 50 49 PM](https://user-images.githubusercontent.com/95282173/186356130-0cd410f4-018a-4c32-8bee-83131e294f0b.jpeg)
 
+### what is pass through mode ssl?
+- SSL passthrough is the action of passing data through a load balancer to a server without decrypting it. Usually, the decryption or SSL termination happens at the load balancer and data is passed along to a web server as plain HTTP. But SSL passthrough keeps the data encrypted as it travels through the load balancer.
+- You cannot use passthrough mode with an ALB and terminate SSL on the EC2 instances.
+
+### You cannot use a HTTPS listener with an NLB.
+### You cannot use a TCP listener with an ALB.
 ### AWS WAF – Web Application Firewall 
 - deploy on 
     - Application Load Balancer
@@ -218,3 +224,10 @@ high-throughput workloads
 
 
 ## EC2 Instance Types - see pdf page from 43 of S.M
+### You can use cloudfront OAI only with s3. To get functionality like OAI in ELB or EC2 we have to change security group using lambda which will allow connection from cloudfront only. CLoudfront keep changes their internal IP. OAI is only possible with s3.
+
+### Lead times are often longer than 1 month to establish a new connection of direct connection.
+### to transfer data within 1 month - use snowball.
+
+
+
