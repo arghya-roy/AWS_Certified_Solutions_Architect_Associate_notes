@@ -215,3 +215,6 @@ high-throughput workloads
    - SSE-KMS: leverage AWS Key Management Service to manage encryption keys | Must set header: “x-amz-server-side-encryption": ”aws:kms" | KMS Advantages: user control + audit trail | HTTP / HTTPS both
    - SSE-C: when you want to manage your own encryption keys | HTTPS must be used
    - Client Side Encryption 
+
+
+## EC2 Instance Types - see pdf page from 43 of S.M
