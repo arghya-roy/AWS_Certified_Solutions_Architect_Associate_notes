@@ -213,5 +213,5 @@ high-throughput workloads
 - There are 4 methods of encrypting objects in S3
    - SSE-S3: encrypts S3 objects using keys handled & managed by AWS | Must set header: “x-amz-server-side-encryption": "AES256" | HTTP / HTTPS both
    - SSE-KMS: leverage AWS Key Management Service to manage encryption keys | Must set header: “x-amz-server-side-encryption": ”aws:kms" | KMS Advantages: user control + audit trail | HTTP / HTTPS both
-   - SSE-C: when you want to manage your own encryption keys HTTPS must be used
+   - SSE-C: when you want to manage your own encryption keys | HTTPS must be used
    - Client Side Encryption 
