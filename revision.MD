@@ -168,3 +168,43 @@ high-throughput workloads
     - IP Addresses – must be private IPs
 
 ![WhatsApp Image 2022-08-24 at 12 50 49 PM](https://user-images.githubusercontent.com/95282173/186356130-0cd410f4-018a-4c32-8bee-83131e294f0b.jpeg)
+
+### AWS WAF – Web Application Firewall 
+- deploy on 
+    - Application Load Balancer
+    - API Gateway
+    - CloudFront
+- Protects from common attack
+   - SQL injection
+   - Cross-Site Scripting (XSS)
+   - OS command injection attacks
+   - DDoS attacks ( layer 7 )
+
+### Amazon GuardDuty
+- It does not protect to from attacking, It notifies you after attack happended ( it come to know about attack by reading logs )
+- Amazon GuardDuty is a threat detection service that continuously monitors your AWS accounts and workloads for malicious activity and delivers detailed security findings for visibility and remediation.
+- Input data includes:
+    - CloudTrail Events Logs – unusual API calls, unauthorized deployments
+         - CloudTrail Management Events – create VPC subnet, create trail, …
+         - CloudTrail S3 Data Events – get object, list objects, delete object, …
+    - VPC Flow Logs – unusual internal traffic, unusual IP address
+    - DNS Logs – compromised EC2 instances sending encoded data within DNS queries
+    - Kubernetes Audit Logs – suspicious activities and potential EKS cluster compromises
+
+## AWS Shield
+- Protect against ddos attack.
+### AWS Shield Standard:
+- Free service that is activated for every AWS customer
+- Provides protection from ddos attacks (such as SYN/UDP Floods - layer 4 transport, Reflection attacks - layrt 3 network ) on layer 3 ( network ) and layer 4 (transport) attacks.
+- Dont have 24/7 access to AWS DDoS response team (DRP)
+- It monitors network flow.
+### AWS Shield Advanced:
+- Optional DDoS mitigation service ($3,000 per month per organization)
+- - It monitors network flow.
+- Protect against more sophisticated and large attack on Amazon EC2, Elastic Load Balancing (ELB), Amazon CloudFront, AWS Global Accelerator, and Route 53
+- 24/7 access to AWS DDoS response team (DRP)
+- Protect against higher fees during usage spikes due to DDoS
+- Provides protection from ddos attacks (such as SYN/UDP Floods - layer 4 transport, Reflection attacks - layrt 3 network, HTTPS flood and dns query flood - application layer 7 ) on layer 3 ( network ) and layer 4 (transport)and layer 7 ( application ) attacks.
+- Include WAF in free of cost.
+- need 1 year subscription commitment.
+
