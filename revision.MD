@@ -271,3 +271,15 @@ For additional resiliency, customers can also explore the use of multi-region fa
 ### To reduce wait time / disk wait time in ec2 host database = increase iops means provisioned IOPS SSD (io1)
 
 ### To increase cpu performance in ec2 host database = change instance type
+
+### EC2 Enhanced Networking (SR-IOV)
+- Higher bandwidth, higher PPS (packet per second), lower latency
+- Option 1: Elastic Network Adapter (ENA) up to 100 Gbps 
+- Option 2: Intel 82599 VF up to 10 Gbps – LEGACY
+### Elastic Fabric Adapter (EFA)
+- Improved ENA for HPC, only works for Linux
+- Great for inter-node communications, tightly coupled workloads
+- Leverages Message Passing Interface (MPI) standard 
+- Bypasses the underlying Linux OS to provide low-latency, reliable transport
+
+### Elastic Network Adapter (ENA) is used to enhanced networking
