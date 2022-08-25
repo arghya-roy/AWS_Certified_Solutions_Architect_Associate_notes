@@ -177,3 +177,8 @@ This means, NOT running 20 instances from the start.
 
 
 ### We have to attach availability zone ( then subnet ) to ALB after that The load balancer routes traffic to targets in these Availability Zones only.
+
+### A company is working with a strategic partner that has an application that must be able to send messages to one of the company’s Amazon SQS queues. The partner company has its own AWS account. How can a Solutions Architect provide least privilege access to the partner?
+
+- Update the permission policy on the SQS queue to grant the sqs:SendMessage permission to the partner’s AWS account
+
