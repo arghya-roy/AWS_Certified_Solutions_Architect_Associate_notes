@@ -110,7 +110,70 @@ This means, NOT running 20 instances from the start.
 
 ### To increase cpu performance in ec2 host database = change instance type
 
+## A legacy tightly-coupled High Performance Computing (HPC) application will be migrated to AWS. Which network adapter type should be used?
+
+- **ANS** Elastic Fabric Adapter (EFA)
+
+## Users cannot login with an OAI.
+
+## Storage Gateway provides a standard set of storage protocols such as iSCSI, SMB, and NFS, which allow you to use AWS storage without rewriting your existing applications.
+
+## The iSCSI protocol is used by AWS Storage Gateway Volume Gateways.
+## iSCSI-virtual tape library (VTL) protocol is used by AWS Storage tape Gateway
+## Retain the instance memory when it will be available - Hibernate the instance
+## A company runs an application that uses an Amazon RDS PostgreSQL database. The database is currently not encrypted. A Solutions Architect has been instructed that due to new compliance requirements all existing and new data in the database must be encrypted. The database experiences high volumes of changes and no data can be lost. How can the Solutions Architect enable encryption for the database without incurring any data loss?
+
+- "Create a snapshot of the existing RDS DB instance. Create an encrypted copy of the snapshot. Create a new RDS DB instance from the encrypted snapshot and update the application. Use AWS DMS to synchronize data between the source and destination RDS DBs" is the correct answer.
+- In this scenario as there is a high rate of change, the databases will be out of sync by the time the new copy is created and is functional. The best way to capture the changes between the source (unencrypted) and destination (encrypted) DB is to use AWS Database Migration Service (DMS) to synchronize the data.
+
+## An eCommerce application consists of three tiers. The web tier includes EC2 instances behind an Application Load balancer, the middle tier uses EC2 instances and an Amazon SQS queue to process orders, and the database tier consists of an Auto Scaling DynamoDB table. During busy periods customers have complained about delays in the processing of orders. A Solutions Architect has been tasked with reducing processing times. Which action will be MOST effective in accomplishing this requirement?
+
+- Use Amazon EC2 Auto Scaling to scale out the middle tier instances based on the SQS queue depth
+- Question is saying that **reducing processing times**
+
+## A company uses an Amazon RDS MySQL database instance to store customer order data. The security team have requested that SSL/TLS encryption in transit must be used for encrypting connections to the database from application servers. The data in the database is currently encrypted at rest using an AWS KMS key. How can a Solutions Architect enable encryption in transit?
+
+- **ANS** Download the AWS-provided root certificates. Use the certificates when connecting to the RDS DB instance
+- Amazon RDS creates an SSL certificate and installs the certificate on the DB instance when Amazon RDS provisions the instance. These certificates are signed by a certificate authority. The SSL certificate includes the DB instance endpoint as the Common Name (CN) for the SSL certificate to guard against spoofing attacks. You can download a root certificate from AWS that works for all Regions or you can download Region-specific intermediate certificates.
+
+## A persistent database must be migrated from an on-premises server to an Amazon EC2 instances. The database requires 64,000 IOPS and, if possible, should be stored on a single Amazon EBS volume. Which solution should a Solutions Architect recommend?
+- Create a Nitro-based Amazon EC2 instance with an Amazon EBS Provisioned IOPS SSD (i01) volume attached. Provision 64,000 IOPS for the volume
+
+## A company wishes to restrict access to their Amazon DynamoDB table to specific, private source IP addresses from their VPC. What should be done to secure access to the table?
+
+-  "Create a gateway VPC endpoint and add an entry to the route table" is the correct answer.
+-  Dynamodb supports gateway endpoint not interface endpoint.
+-  You cannot create a DynamoDB table in a VPC
+-  You cannot create an AWS VPN connection to the Amazon DynamoDB endpoint.
+
+## RedShift is a data warehouse and used for running analytics queries on data that is exported from transactional database systems. It should not be used to reduce latency for users of a database, and is not a live copy of the data.
+
+## You can now create cross-region read replicas for Amazon RDS database and aurora instances!
+
+## A company requires that all AWS IAM user accounts have specific complexity requirements and minimum password length. How should a Solutions Architect accomplish this?
+
+- Set a password policy for the entire AWS account
+
+## cloud agnostic = can be done in any cloud
+
+## An insurance company has a web application that serves users in the United Kingdom and Australia. The application includes a database tier using a MySQL database hosted in eu-west-2. The web tier runs from eu-west-2 and ap-southeast-2. Amazon Route 53 geoproximity routing is used to direct users to the closest web tier. It has been noted that Australian users receive slow response times to queries. Which changes should be made to the database tier to improve performance?
+
+- Migrate the database to an Amazon Aurora global database in MySQL compatibility mode. Configure read replicas in ap-southeast-2
+-  "Deploy MySQL instances in each Region. Deploy an Application Load Balancer in front of MySQL to reduce the load on the primary instance" is incorrect as you can only put ALBs in front of the web tier, not the DB tier.
+
+## ECS ROLES
+
+### Container Instance IAM Role:
+  - The role assigned to the EC2 instance that your ECS tasks will be deployed to. 
+  - This role is used by the EC2 instances to register/join the ECS cluster.
+
+### Task Execution IAM Role 
+  - **AmazonECSTaskExecutionRolePolicy** parameter 
+  - Used by the ECS service to do things like pull the image from ECR and send container logs to CloudWatch.
+
+### IAM TASK ROLE
+  - **taskRoleArn** parameter is used to specify the policy
+  - It is the role your application code running in the ECS task container can assume to make AWS API calls.
 
 
-
-
+### We have to attach availability zone ( then subnet ) to ALB after that The load balancer routes traffic to targets in these Availability Zones only.
