@@ -252,7 +252,61 @@ In this case Lambda@Edge can compress the files before they are sent to users wh
 
 
 
+## A company plans to provide developers with individual AWS accounts. The company will use AWS Organizations to provision the accounts. A Solutions Architect must implement secure auditing using AWS CloudTrail so that all events from all AWS accounts are logged. The developers must not be able to use root-level permissions to alter the AWS CloudTrail configuration in any way or access the log files in the S3 bucket. The auditing solution and security controls must automatically apply to all new developer accounts that are created. Which action should the Solutions Architect take?
+
+- "Create a new trail in CloudTrail from within the management account with the organization trails option enabled" is the correct answer.
+- Member accounts can see the organization trail but can't modify or delete it. By default, member accounts don't have access to the log files for the organization trail in the Amazon S3 bucket.
+
+## A retail organization sends coupons out twice a week and this results in a predictable surge in sales traffic. The application runs on Amazon EC2 instances behind an Elastic Load Balancer. The organization is looking for ways lower costs while ensuring they meet the demands of their customers. How can they achieve this goal?
+
+- Use capacity reservations with savings plans
+
+## There is no metric for GuardDuty that can be used for specific findings.
+## RAID 1 is mirroring and does not increase the amount of IOPS you can generate.
+
+## The processed data would be going from the EC2 instance to a bucket in a different Region which would incur data transfer charges.
+
+## A Solutions Architect is creating a URL that lets users who sign in to the organization’s network securely access the AWS Management Console. The URL will include a sign-in token that authenticates the user to AWS. Microsoft Active Directory Federation Services is being used as the identity provider (IdP). Which of the steps below will the Solutions Architect need to include when developing the custom identity broker? (choose 2)
+
+- Call the AWS federation endpoint and supply the temporary security credentials to request a sign-in token
+- Call the AWS Security Token Service (AWS STS) AssumeRole or GetFederationToken API operations to obtain temporary security credentials for the user
+
+## Nat instance vs nat gateway
+
+![image](https://user-images.githubusercontent.com/95282173/186900490-d722a469-560e-4ea5-b3e1-919c5ead3471.png)
+
+## A Solutions Architect must design a solution for providing single sign-on to existing staff in a company. The staff manage on-premise web applications and also need access to the AWS management console to manage resources in the AWS cloud. Which combination of services are BEST suited to delivering these requirements?
+
+- "Use the AWS Secure Token Service (STS) and SAML" is the correct answer.
+- SAML is used for single sign-on between on-premises directories and the AWS management console.
+
+## Cloudwatch basic monitoring - 5 min period
+## cloudwatch detail monitoring - 1 min period
+
+## To increase performance and redundancy for an application a company has decided to run multiple implementations in different AWS Regions behind network load balancers. The company currently advertise the application using two public IP addresses from separate /24 address ranges and would prefer not to change these. Users should be directed to the closest available application endpoint. Which actions should a solutions architect take? (Select TWO.)
+
+- "Create an AWS Global Accelerator and attach endpoints in each AWS Region"
+- "Migrate both public IP addresses to the AWS Global Accelerator"
+- "Assign new static anycast IP addresses and modify any existing pointers" is incorrect. This is unnecessary as you can bring your own IP addresses to AWS Global Accelerator and this is preferred in this scenario.
+
+## EBS Data Lifecycle Manager (DLM) 
+- The EBS Data Lifecycle Manager (DLM) can automate the creation, retention, and deletion of backups for the Amazon EBS volumes in an Amazon VPC for you and this can be performed centrally from within the management console.
+
+## Every time an item in an Amazon DynamoDB table is modified a record must be retained for compliance reasons. What is the most efficient solution to recording this information?
+- Enable DynamoDB Streams. Configure an AWS Lambda function to poll the stream and record the modified item data to an Amazon S3 bucket
+- CloudTrail records API actions so it will not record the data from the item that was modified.
+
+## Elasticache can give sub-milisecond response but read replica can not.
+
+## Aurora, RDS scaling can cause downtime but dynamodb can not.
 
 
+## A customer has a public-facing web application hosted on a single Amazon Elastic Compute Cloud (EC2) instance serving videos directly from an Amazon S3 bucket. Which of the following will restrict third parties from directly accessing the video assets in the bucket?
 
+- "Use a bucket policy to only allow referrals from the main website URL" is the correct answer.
+- To allow read access to the S3 video assets from the public-facing web application, you can add a bucket policy that allows s3:GetObject permission with a condition, using the aws:referer key, that the get request must originate from specific webpages. This is a good answer as it fully satisfies the objective of ensuring the that EC2 instance can access the videos but direct access to the videos from other sources is prevented.
 
+## An application that runs a computational fluid dynamics workload uses a tightly-coupled HPC architecture that uses the MPI protocol and runs across many nodes. A service-managed deployment is required to minimize operational overhead. Which deployment option is MOST suitable for provisioning and managing the resources required for this use case?
+
+- "Use AWS Batch to deploy a multi-node parallel job" is the correct answer.
+- AWS Batch Multi-node parallel jobs enable you to run single jobs that span multiple Amazon EC2 instances. With AWS Batch multi-node parallel jobs, you can run large-scale, tightly coupled, high performance computing applications and distributed GPU model training without the need to launch, configure, and manage Amazon EC2 resources directly. An AWS Batch multi-node parallel job is compatible with any framework that supports IP-based, internode communication, such as Apache MXNet, TensorFlow, Caffe2, or Message Passing Interface (MPI). This is the most efficient approach to deploy the resources required and supports the application requirements most effectively.
