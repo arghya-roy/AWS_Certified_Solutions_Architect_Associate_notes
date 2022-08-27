@@ -310,3 +310,104 @@ In this case Lambda@Edge can compress the files before they are sent to users wh
 
 - "Use AWS Batch to deploy a multi-node parallel job" is the correct answer.
 - AWS Batch Multi-node parallel jobs enable you to run single jobs that span multiple Amazon EC2 instances. With AWS Batch multi-node parallel jobs, you can run large-scale, tightly coupled, high performance computing applications and distributed GPU model training without the need to launch, configure, and manage Amazon EC2 resources directly. An AWS Batch multi-node parallel job is compatible with any framework that supports IP-based, internode communication, such as Apache MXNet, TensorFlow, Caffe2, or Message Passing Interface (MPI). This is the most efficient approach to deploy the resources required and supports the application requirements most effectively.
+
+## An application is generating a large amount of clickstream events data that is being stored on S3. The business needs to understand customer behaviour and want to run complex analytics queries against the data. Which AWS service can be used for this requirement?
+
+- "Amazon RedShift" is the correct answer.
+- "Amazon Kinesis Firehose" is incorrect. Amazon Kinesis Firehose processes streaming data, not data stored on S3.
+
+## An Amazon DynamoDB table has a variable load, ranging from sustained heavy usage some days, to only having small spikes on others. The load is 80% read and 20% write. The provisioned throughput capacity has been configured to account for the heavy load to ensure throttling does not occur. What would be the most efficient solution to optimize cost?
+
+-  "Create a DynamoDB Auto Scaling scaling policy" is the correct answer.
+-  "Use DynamoDB DAX to increase the performance of the database" is incorrect. DynamoDB DAX is an in-memory cache that increases the performance of DynamoDB. However, it costs money and there is no requirement to increase performance.
+
+## A company runs a streaming media service and the content is stored on Amazon S3. The media catalog server pulls updated content from S3 and can issue over 1 million read operations per second for short periods. Latency must be kept under 5ms for these updates. Which solution will provide the BEST performance for the media catalog updates?
+
+- "Update the application code to use an Amazon ElastiCache for Redis cluster" is the correct answer.
+- "Implement Amazon CloudFront and cache the content at Edge Locations" is incorrect. CloudFront is good for getting media closer to users but in this case we’re trying to improve performance within the data center moving data from S3 to the media catalog server.
+
+## An Amazon EC2 instance behind an Elastic Load Balancer (ELB) is in the process of being de-registered. Which ELB feature is used to allow existing connections to close cleanly?
+
+- "Connection Draining" is the correct answer.
+- **Connection Draining** - Connection draining is enabled by default and provides a period of time for existing connections to close cleanly. When connection draining is in action an CLB will be in the status “InService: Instance deregistration currently in progress”.
+- **Sticky Sessions** -  Session stickiness uses cookies and ensures a client is bound to an individual back-end instance for the duration of the cookie lifetime.
+- **Proxy Protocol** - The Proxy Protocol header helps you identify the IP address of a client when you have a load balancer that uses TCP for back-end connections.
+- **Deletion Protection** - Deletion protection is used to protect the ELB from deletion.
+
+## In a default VPC instances will be assigned a public and private DNS hostname
+## In a non-default VPC instances will be assigned a private but not a public DNS hostname
+## Default security group has 
+- There is an inbound rule that allows all traffic from the security group itself
+- There is an outbound rule that allows all traffic to all addresses
+
+## new security group has 
+- There are no inbound rules and traffic will be implicitly denied
+- There is an outbound rule that allows all traffic to all IP addresses
+
+## default NACL has 
+-    There is a default inbound rule allowing all traffic
+-    There is a default outbound rule allowing all traffic
+## a new Network ACL has 
+-    There is a default inbound rule denying all traffic
+-    There is a default outbound rule denying all traffic
+
+## AWS Serverless Application Model (AWS SAM) -
+AWS Serverless Application Model (AWS SAM) is an extension of AWS CloudFormation that is used to package, test, and deploy serverless applications.
+
+## A Solutions Architect created a new subnet in an Amazon VPC and launched an Amazon EC2 instance into it. The Solutions Architect needs to directly access the EC2 instance from the Internet and cannot connect. Which steps should be undertaken to troubleshoot the issue? (choose 2)
+
+- Check that the instance has a public IP address
+- Check that the route table associated with the subnet has an entry for an Internet Gateway
+
+## DR strategy -
+### Backup and restore -
+ This is the lowest cost DR approach that simply entails creating online backups of all data and applications.
+ 
+### Pilot light -
+ With a pilot light strategy a core minimum of services are running and the remainder are only brought online during a disaster recovery situation.
+
+### Warm standby -
+The term warm standby is used to describe a DR scenario in which a scaled-down version of a fully functional environment is always running in the cloud. A warm standby solution extends the pilot light elements and preparation.
+
+It further decreases the recovery time because some services are always running. By identifying your business-critical systems, you can fully duplicate these systems on AWS and have them always on.
+
+### Multi-site -
+A multi-site solution runs on AWS as well as on your existing on-site infrastructure in an active- active configuration.
+
+## A company has deployed an API using Amazon API Gateway. There are many repeat requests and a solutions architect has been asked to implement measures to reduce request latency and the number of calls to the Amazon EC2 endpoint. How can this be most easily achieved?
+
+- "Create a cache for a stage and configure a TTL" is the correct answer.
+- "Create a cache for a method and configure a TTL" is incorrect. An API cache is not enabled for a method, it is enabled for a stage.
+
+## An application you manage runs a number of components using a micro-services architecture. Several ECS container instances in your ECS cluster are displaying as disconnected. The ECS instances were created from the Amazon ECS-Optimized AMI. What steps might you take to troubleshoot the issue? (choose 2)   
+
+- Verify that the IAM instance profile has the necessary permissions
+- Verify that the container agent is running on the container instances
+- "Verify that the container instances have the container agent installed" is incorrect as the ECS-optimized AMI has the agent included.
+
+### Troubleshooting steps for containers include:
+
+- Verify that the Docker daemon is running on the container instance.
+
+- Verify that the Docker Container daemon is running on the container instance.
+
+- Verify that the container agent is running on the container instance.
+
+- Verify that the IAM instance profile has the necessary permissions.
+
+## Using cloudwatch we can lambda track of 
+- the number of requests, 
+- and the number of requests resulting in an error. 
+- the latency per request,
+
+## A company has multiple AWS accounts for several environments (Prod, Dev, Test etc.). A Solutions Architect would like to copy an Amazon EBS snapshot from DEV to PROD. The snapshot is from an EBS volume that was encrypted with a custom key. What steps must be performed to share the encrypted EBS snapshot with the Prod account? (choose 2)
+
+- Share the custom key used to encrypt the volume
+- Modify the permissions on the encrypted snapshot to share it with the Prod account
+
+## A Solutions Architect manages multiple Amazon RDS MySQL databases. To improve security, the Solutions Architect wants to enable secure user access with short-lived credentials. How can these requirements be met?
+
+- Create the MySQL user accounts to use the AWSAuthenticationPlugin with IAM
+- "Configure the MySQL databases to use the AWS Security Token Service (STS)" is incorrect. You cannot configure MySQL to directly use the AWS STS.
+
+## 
